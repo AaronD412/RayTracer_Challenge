@@ -81,10 +81,10 @@ namespace RayTracerTests
 
             // Then
             Assert.AreEqual(4, intersections.Count);
-            Assert.IsTrue(intersections[0].SceneObject.NearlyEquals(sphere_2));
-            Assert.IsTrue(intersections[1].SceneObject.NearlyEquals(sphere_2));
-            Assert.IsTrue(intersections[2].SceneObject.NearlyEquals(sphere_1));
-            Assert.IsTrue(intersections[3].SceneObject.NearlyEquals(sphere_1));
+            Assert.IsTrue(intersections[0].Shape.NearlyEquals(sphere_2));
+            Assert.IsTrue(intersections[1].Shape.NearlyEquals(sphere_2));
+            Assert.IsTrue(intersections[2].Shape.NearlyEquals(sphere_1));
+            Assert.IsTrue(intersections[3].Shape.NearlyEquals(sphere_1));
         }
 
     }

@@ -69,7 +69,7 @@ namespace RayTracerLogic
 
                 if (container.Contains(intersection.Shape))
                 {
-                    container.Remove(intersection.Shape)
+                    container.Remove(intersection.Shape);
                 }
                 else
                 {
