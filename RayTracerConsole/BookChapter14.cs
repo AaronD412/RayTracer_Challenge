@@ -30,10 +30,12 @@ namespace RayTracerConsole
         /// <returns>The world.</returns>
         public World GetWorld()
         {
-            public Shape HexagonCorner()
+            public Sphere HexagonCorner()
             {
                 Sphere corner = new Sphere();
-                corner.Transform = Matrix.NewTranslationMatrix()
+                corner.Transform = Matrix.NewTranslationMatrix(0, 0, -1) * Matrix.NewSclaingMatrix(0.25, 0.25, 0.25));
+
+                return corner;
             }
 
             return world;
