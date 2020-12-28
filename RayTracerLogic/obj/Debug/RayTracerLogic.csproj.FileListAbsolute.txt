@@ -21,3 +21,9 @@ C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/Ra
 /Users/timo/Documents/RayTracer/RayTracerLogic/bin/Debug/RayTracerLogic.pdb
 /Users/timo/Documents/RayTracer/RayTracerLogic/obj/Debug/RayTracerLogic.dll
 /Users/timo/Documents/RayTracer/RayTracerLogic/obj/Debug/RayTracerLogic.pdb
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerLogic/bin/Debug/RayTracerLogic.dll
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerLogic/bin/Debug/RayTracerLogic.pdb
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerLogic/obj/Debug/RayTracerLogic.csprojAssemblyReference.cache
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerLogic/obj/Debug/RayTracerLogic.csproj.CoreCompileInputs.cache
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerLogic/obj/Debug/RayTracerLogic.dll
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerLogic/obj/Debug/RayTracerLogic.pdb

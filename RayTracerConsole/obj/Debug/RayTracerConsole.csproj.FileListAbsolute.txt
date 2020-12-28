@@ -38,3 +38,13 @@ C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/Ra
 /Users/timo/Documents/RayTracer/RayTracerConsole/obj/Debug/RayTracerConsole.csproj.CopyComplete
 /Users/timo/Documents/RayTracer/RayTracerConsole/obj/Debug/RayTracerMain.exe
 /Users/timo/Documents/RayTracer/RayTracerConsole/obj/Debug/RayTracerMain.pdb
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerConsole/bin/Debug/RayTracerMain.exe.config
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerConsole/bin/Debug/RayTracerMain.exe
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerConsole/bin/Debug/RayTracerMain.pdb
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerConsole/bin/Debug/RayTracerLogic.dll
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerConsole/bin/Debug/RayTracerLogic.pdb
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerConsole/obj/Debug/RayTracerConsole.csprojAssemblyReference.cache
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerConsole/obj/Debug/RayTracerConsole.csproj.CoreCompileInputs.cache
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerConsole/obj/Debug/RayTracerConsole.csproj.CopyComplete
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerConsole/obj/Debug/RayTracerMain.exe
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerConsole/obj/Debug/RayTracerMain.pdb

@@ -42,3 +42,14 @@ C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/Ra
 /Users/timo/Documents/RayTracer/RayTracerTests/obj/Debug/RayTracerTests.csproj.CopyComplete
 /Users/timo/Documents/RayTracer/RayTracerTests/obj/Debug/RayTracerTests.dll
 /Users/timo/Documents/RayTracer/RayTracerTests/obj/Debug/RayTracerTests.pdb
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerTests/bin/Debug/RayTracerTests.dll
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerTests/bin/Debug/RayTracerTests.pdb
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerTests/bin/Debug/nunit.framework.dll
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerTests/bin/Debug/RayTracerLogic.dll
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerTests/bin/Debug/RayTracerLogic.pdb
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerTests/bin/Debug/nunit.framework.xml
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerTests/obj/Debug/RayTracerTests.csprojAssemblyReference.cache
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerTests/obj/Debug/RayTracerTests.csproj.CoreCompileInputs.cache
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerTests/obj/Debug/RayTracerTests.csproj.CopyComplete
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerTests/obj/Debug/RayTracerTests.dll
+/Users/timo/Documents/GIT/RayTracer_Challenge/RayTracerTests/obj/Debug/RayTracerTests.pdb

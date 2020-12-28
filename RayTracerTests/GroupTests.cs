@@ -44,7 +44,7 @@ namespace RayTracerTests
         }
 
         [Test()]
-        public void IntersectinARayWithAnEmptyGroup()
+        public void IntersectingARayWithAnEmptyGroup()
         {
             // Given
             Group group = new Group();
