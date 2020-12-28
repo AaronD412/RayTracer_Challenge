@@ -70,12 +70,12 @@ namespace RayTracerConsole
             world.LightSources.Add(new PointLight(new Point(-10, 10, -10), Color.GetWhite()));
             world.LightSources.Add(new PointLight(new Point(10, 5, 20), Color.GetWhite()));
 
-            world.SceneObjects.Add(floor);
-            world.SceneObjects.Add(leftWall);
-            world.SceneObjects.Add(rightWall);
-            world.SceneObjects.Add(middle);
-            world.SceneObjects.Add(right);
-            world.SceneObjects.Add(left);
+            world.Shape.Add(floor);
+            world.Shape.Add(leftWall);
+            world.Shape.Add(rightWall);
+            world.Shape.Add(middle);
+            world.Shape.Add(right);
+            world.Shape.Add(left);
 
             return world;
         }

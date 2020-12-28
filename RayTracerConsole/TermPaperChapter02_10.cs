@@ -39,8 +39,8 @@ namespace RayTracerConsole
             World world = new World();
             world.LightSources.Add(new PointLight(new Point(-10, 5, -10), Color.GetWhite()));
 
-            world.SceneObjects.Add(floor);
-            world.SceneObjects.Add(sphere);
+            world.Shape.Add(floor);
+            world.Shape.Add(sphere);
 
             return world;
         }

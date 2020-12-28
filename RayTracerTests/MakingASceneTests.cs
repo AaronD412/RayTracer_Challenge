@@ -13,7 +13,7 @@ namespace RayTracerTests
             World world = new World();
 
             // Then
-            Assert.AreEqual(0, world.SceneObjects.Count);
+            Assert.AreEqual(0, world.Shape.Count);
             Assert.AreEqual(0, world.LightSources.Count);
         }
 
@@ -36,8 +36,8 @@ namespace RayTracerTests
 
             // Then
             Assert.IsTrue(defaultWorld.LightSources[0].NearlyEquals(light));
-            Assert.IsTrue(defaultWorld.SceneObjects[0].NearlyEquals(sphereOne));
-            Assert.IsTrue(defaultWorld.SceneObjects[1].NearlyEquals(sphereTwo));
+            Assert.IsTrue(defaultWorld.Shape[0].NearlyEquals(sphereOne));
+            Assert.IsTrue(defaultWorld.Shape[1].NearlyEquals(sphereTwo));
         }
 
         [Test()]
@@ -71,7 +71,7 @@ namespace RayTracerTests
 
             // Then
             Assert.IsTrue(preparedIntersection.Distance.NearlyEquals(intersection.Distance));
-            Assert.IsTrue(preparedIntersection.SceneObject.NearlyEquals(intersection.SceneObject));
+            Assert.IsTrue(preparedIntersection.Shape.NearlyEquals(intersection.Shape));
             Assert.IsTrue(preparedIntersection.Point.NearlyEquals(new Point(0, 0, -1)));
             Assert.IsTrue(preparedIntersection.EyeVector.NearlyEquals(new Vector(0, 0, -1)));
             Assert.IsTrue(preparedIntersection.NormalVector.NearlyEquals(new Vector(0, 0, -1)));
@@ -118,7 +118,7 @@ namespace RayTracerTests
             // Given
             World world = DefaultWorld.NewDefaultWorld();
             Ray ray = new Ray(new Point(0, 0, -5), new Vector(0, 0, 1));
-            SceneObject shape = world.SceneObjects[0];
+            Shape shape = world.Shape[0];
             Intersection intersection = new Intersection(4, shape);
 
             // When
@@ -136,7 +136,7 @@ namespace RayTracerTests
             World world = DefaultWorld.NewDefaultWorld();
             world.LightSources[0] = new PointLight(new Point(0, 0.25, 0), new Color(1, 1, 1));
             Ray ray = new Ray(new Point(0, 0, 0), new Vector(0, 0, 1));
-            SceneObject shape = world.SceneObjects[1];
+            Shape shape = world.Shape[1];
             Intersection intersection = new Intersection(0.5, shape);
 
             // When
@@ -181,10 +181,10 @@ namespace RayTracerTests
             // Given
             World world = DefaultWorld.NewDefaultWorld();
 
-            SceneObject outer = world.SceneObjects[0];
+            Shape outer = world.Shape[0];
             outer.Material.Ambient = 1;
 
-            SceneObject inner = world.SceneObjects[1];
+            Shape inner = world.Shape[1];
             inner.Material.Ambient = 1;
 
             Ray ray = new Ray(new Point(0, 0, 0.75), new Vector(0, 0, -1));

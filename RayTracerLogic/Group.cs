@@ -40,7 +40,7 @@ namespace RayTracerLogic
 
         public override Intersections GetIntersectionsLocal(Ray ray)
         {
-            Intersections intersections = new Intersections();
+             Intersections intersections = new Intersections();
 
             foreach (Shape child in children)
             {

@@ -5,7 +5,7 @@ namespace RayTracerLogic
     /// <summary>
     /// Represents a sphere at the Point(0, 0, 0) with a radius of 1
     /// </summary>
-    public class Sphere : SceneObject
+    public class Sphere : Shape
     {
         #region Public Methods
 
@@ -14,11 +14,9 @@ namespace RayTracerLogic
         /// </summary>
         /// <returns>The normal at local.</returns>
         /// <param name="objectPoint">Object point.</param>
-        public override Vector GetNormalAtLocal(Point objectPoint)
+        public override Vector GetNormalAtLocal(Point objectPoint, Intersection hit = null)
         {
-            Vector objectNormal = objectPoint - new Point(0, 0, 0);
-
-            return objectNormal;
+            return new Vector(objectPoint.X, objectPoint.Y, objectPoint.Z);
         }
 
         /// <summary>
@@ -45,7 +43,7 @@ namespace RayTracerLogic
         /// </summary>
         /// <returns>The intersections.</returns>
         /// <param name="ray">Ray.</param>
-        protected override Intersections GetIntersectionsLocal(Ray localRay)
+        public override Intersections GetIntersectionsLocal(Ray localRay)
         {
             // The vector from the sphere's center, to the ray origin.
             // Remember: the sphere is centered at the world origin.
@@ -71,14 +69,21 @@ namespace RayTracerLogic
             );
         }
 
+        public override BoundingBox GetBoundingBox()
+        {
+            return new BoundingBox(
+                new Point(-1, -1, -1),
+                new Point(1, 1, 1));
+        }
+
         /// <summary>
         /// Nearlies the equals local.
         /// </summary>
         /// <returns><c>true</c>, if equals local was nearlyed, <c>false</c> otherwise.</returns>
         /// <param name="sceneObject">Scene object.</param>
-        protected override bool NearlyEqualsLocal(SceneObject sceneObject)
+        protected override bool NearlyEqualsLocal(Shape shape)
         {
-            return sceneObject is Sphere;
+            return true;
         }
 
         #endregion

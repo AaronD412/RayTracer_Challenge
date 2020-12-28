@@ -124,7 +124,7 @@ namespace RayTracerTests
             Sphere sphere = new Sphere();
 
             // Then
-            Assert.IsInstanceOf<SceneObject>(sphere);
+            Assert.IsInstanceOf<Shape>(sphere);
         }
 
         [Test()]
@@ -185,7 +185,7 @@ namespace RayTracerTests
             // Then
             Assert.AreEqual(1, intersections.Count);
             Assert.IsTrue(intersections[0].Distance.NearlyEquals(1));
-            Assert.AreSame(plane, intersections[0].SceneObject);
+            Assert.AreSame(plane, intersections[0].Shape);
         }
 
         [Test()]
@@ -201,21 +201,21 @@ namespace RayTracerTests
             // Then
             Assert.AreEqual(1, intersections.Count);
             Assert.IsTrue(intersections[0].Distance.NearlyEquals(1));
-            Assert.AreSame(plane, intersections[0].SceneObject);
+            Assert.AreSame(plane, intersections[0].Shape);
         }
 
-        private class TestShape : SceneObject
+        private class TestShape : Shape
         {
             private Ray localRay;
 
-            protected override Intersections GetIntersectionsLocal(Ray localRay)
+            public override Intersections GetIntersectionsLocal(Ray localRay)
             {
                 this.localRay = localRay;
 
                 return new Intersections();
             }
 
-            public override Vector GetNormalAtLocal(Point objectPoint)
+            public override Vector GetNormalAtLocal(Point objectPoint, Intersection hit = null)
             {
                 return new Vector(objectPoint.X, objectPoint.Y, objectPoint.Z);
             }
@@ -228,9 +228,17 @@ namespace RayTracerTests
                 }
             }
 
-            protected override bool NearlyEqualsLocal(SceneObject sceneObject)
+            public override BoundingBox GetBoundingBox()
             {
-                return sceneObject is TestShape;
+                return new BoundingBox(
+                    new Point(double.NegativeInfinity, 0, double.NegativeInfinity),
+                    new Point(double.PositiveInfinity, 0, double.PositiveInfinity)
+                );
+            }
+
+            protected override bool NearlyEqualsLocal(Shape shape)
+            {
+                return shape is TestShape;
             }
         }
     }

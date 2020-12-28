@@ -68,7 +68,7 @@ namespace RayTracerLogic
         /// <param name="eyeVector">Eye vector.</param>
         /// <param name="normalVector">Normal vector.</param>
         /// <param name="inShadow">If set to <c>true</c> in shadow.</param>
-        public Color GetLighting(SceneObject sceneObject, PointLight light, Point point, Vector eyeVector, Vector normalVector, bool inShadow)
+        public Color GetLighting(Shape shape, PointLight light, Point point, Vector eyeVector, Vector normalVector, bool inShadow)
         {
             // Find the direction to the light source
             Vector lightVector = (light.Position - point).Normalize();
@@ -76,7 +76,7 @@ namespace RayTracerLogic
 
             if (pattern != null)
             {
-                color = pattern.GetPatternAtObject(sceneObject, point);
+                color = pattern.GetPatternAtObject(shape, point);
             }
             else
             {

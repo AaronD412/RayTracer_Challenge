@@ -79,12 +79,12 @@ namespace RayTracerTests
             world.LightSources.Add(new PointLight(new Point(0, 0, -10), new Color(1, 1, 1)));
 
             Sphere sphereOne = new Sphere();
-            world.SceneObjects.Add(sphereOne);
+            world.Shape.Add(sphereOne);
 
             Sphere sphereTwo = new Sphere();
             sphereTwo.Transform = sphereTwo.Transform.Translate(0, 0, 10);
 
-            world.SceneObjects.Add(sphereTwo);
+            world.Shape.Add(sphereTwo);
 
             Ray ray = new Ray(new Point(0, 0, 5), new Vector(0, 0, 1));
             Intersection intersection = new Intersection(4, sphereTwo);

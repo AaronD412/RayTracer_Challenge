@@ -85,7 +85,7 @@ namespace RayTracerTests
         public void StripesWithAnObjectTransformation()
         {
             // Given
-            SceneObject sphere = new Sphere();
+            Shape sphere = new Sphere();
             sphere.Transform = sphere.Transform.Scale(2, 2, 2);
 
             StripePattern pattern = new StripePattern(Color.GetWhite(), Color.GetBlack());
@@ -101,7 +101,7 @@ namespace RayTracerTests
         public void StripesWithAPatternTransformation()
         {
             // Given
-            SceneObject sphere = new Sphere();
+            Shape sphere = new Sphere();
 
             StripePattern pattern = new StripePattern(Color.GetWhite(), Color.GetBlack());
             pattern.Transform = pattern.Transform.Scale(2, 2, 2);
@@ -117,7 +117,7 @@ namespace RayTracerTests
         public void StripesWithBothAnObjectAndAPatternTransformation()
         {
             // Given
-            SceneObject sphere = new Sphere();
+            Shape sphere = new Sphere();
             sphere.Transform = sphere.Transform.Scale(2, 2, 2);
 
             StripePattern pattern = new StripePattern(Color.GetWhite(), Color.GetBlack());
@@ -157,7 +157,7 @@ namespace RayTracerTests
         public void APatternWithAnObjectTransformation()
         {
             // Given
-            SceneObject shape = new Sphere();
+            Shape shape = new Sphere();
             shape.Transform = shape.Transform.Scale(2, 2, 2);
 
             Pattern pattern = new TestPattern();
@@ -173,7 +173,7 @@ namespace RayTracerTests
         public void APatternWithAPatternTransformation()
         {
             // Given
-            SceneObject shape = new Sphere();
+            Shape shape = new Sphere();
 
             Pattern pattern = new TestPattern();
             pattern.Transform = pattern.Transform.Scale(2, 2, 2);
@@ -189,7 +189,7 @@ namespace RayTracerTests
         public void AAptternWithBothAnObjectAnAPatternTransformation()
         {
             // Given
-            SceneObject shape = new Sphere();
+            Shape shape = new Sphere();
             shape.Transform = shape.Transform.Scale(2, 2, 2);
 
             Pattern pattern = new TestPattern();

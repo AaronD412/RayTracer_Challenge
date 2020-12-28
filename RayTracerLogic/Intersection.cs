@@ -17,7 +17,7 @@ namespace RayTracerLogic
         /// <summary>
         /// The scene object.
         /// </summary>
-        private SceneObject sceneObject;
+        private Shape shape;
 
         #endregion
 
@@ -28,10 +28,10 @@ namespace RayTracerLogic
         /// </summary>
         /// <param name="distance">Distance.</param>
         /// <param name="sceneObject">Scene object.</param>
-        public Intersection(double distance, SceneObject sceneObject)
+        public Intersection(double distance, Shape shape)
         {
             this.distance = distance;
-            this.sceneObject = sceneObject;
+            this.shape = shape;
         }
 
         #endregion
@@ -51,7 +51,7 @@ namespace RayTracerLogic
             double n1 = 0;
             double n2 = 0;
 
-            List<SceneObject> container = new List<SceneObject>();
+            List<Shape> container = new List<Shape>();
 
             foreach (Intersection intersection in intersections)
             {
@@ -67,13 +67,13 @@ namespace RayTracerLogic
                     }
                 }
 
-                if (container.Contains(intersection.sceneObject))
+                if (container.Contains(intersection.Shape))
                 {
-                    container.Remove(intersection.sceneObject);
+                    container.Remove(intersection.Shape);
                 }
                 else
                 {
-                    container.Add(intersection.sceneObject);
+                    container.Add(intersection.Shape);
                 }
 
                 if (this == intersection)
@@ -93,10 +93,10 @@ namespace RayTracerLogic
 
             PreparedIntersection preparedIntersection = new PreparedIntersection(
                 distance,
-                SceneObject,
+                shape,
                 point,
                 -ray.Direction,
-                sceneObject.GetNormalAt(point),
+                shape.GetNormalAt(point),
                 n1,
                 n2
             );
@@ -124,11 +124,11 @@ namespace RayTracerLogic
         /// Gets the scene object.
         /// </summary>
         /// <value>The scene object.</value>
-        public SceneObject SceneObject
+        public Shape Shape
         {
             get
             {
-                return sceneObject;
+                return shape;
             }
         }
 
