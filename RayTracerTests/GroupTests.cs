@@ -49,19 +49,27 @@ namespace RayTracerTests
             // Given
             Group group = new Group();
 
-            Sphere sphere_1 = new Sphere();
-            Sphere sphere_2 = new Sphere();
-            Sphere sphere_3 = new Sphere();
+            Ray ray = new Ray(new Point(0, 0, 0), new Vector(0, 0, 1));
 
-            sphere_2.Transform = Matrix.NewTranslationMatrix(0, 0, -3);
-            sphere_3.Transform = Matrix.NewTranslationMatrix(5, 0, 0);
+            //When
+            Intersections intersections = group.GetIntersections(ray);
 
+            //Then
+            Assert.AreEqual(0, intersections.Count);
         }
 
         [Test()]
         public void IntersectingARayWithAnNonEmptyGroup()
         {
             // ToDO: implement test intersecting a ray with an empty group.
+            Group group = new Group();
+
+            Sphere sphere_1 = new Sphere();
+            Sphere sphere_2 = new Sphere();
+            Sphere sphere_3 = new Sphere();
+
+            sphere_2.Transform = Matrix.NewTranslationMatrix(0, 0, -3);
+            sphere_3.Transform = Matrix.NewTranslationMatrix(5, 0, 0);
         }
 
     }
