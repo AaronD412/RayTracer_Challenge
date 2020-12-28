@@ -81,9 +81,9 @@ namespace RayTracerLogic
         /// </summary>
         /// <returns><c>true</c>, if equals local was nearlyed, <c>false</c> otherwise.</returns>
         /// <param name="sceneObject">Scene object.</param>
-        protected override bool NearlyEqualsLocal(SceneObject sceneObject)
+        protected override bool NearlyEqualsLocal(Shape shape)
         {
-            return sceneObject is Sphere;
+            return true;
         }
 
         #endregion
