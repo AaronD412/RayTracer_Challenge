@@ -1,0 +1,321 @@
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/Main.exe.config
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/Main.exe
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/Main.pdb
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/Microsoft.Win32.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/netstandard.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.AppContext.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Collections.Concurrent.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Collections.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Collections.NonGeneric.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Collections.Specialized.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.ComponentModel.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.ComponentModel.EventBasedAsync.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.ComponentModel.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.ComponentModel.TypeConverter.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Console.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Data.Common.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Diagnostics.Contracts.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Diagnostics.Debug.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Diagnostics.FileVersionInfo.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Diagnostics.Process.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Diagnostics.StackTrace.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Diagnostics.TextWriterTraceListener.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Diagnostics.Tools.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Diagnostics.TraceSource.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Diagnostics.Tracing.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Drawing.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Dynamic.Runtime.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Globalization.Calendars.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Globalization.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Globalization.Extensions.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.IO.Compression.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.IO.Compression.ZipFile.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.IO.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.IO.FileSystem.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.IO.FileSystem.DriveInfo.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.IO.FileSystem.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.IO.FileSystem.Watcher.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.IO.IsolatedStorage.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.IO.MemoryMappedFiles.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.IO.Pipes.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.IO.UnmanagedMemoryStream.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Linq.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Linq.Expressions.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Linq.Parallel.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Linq.Queryable.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Net.Http.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Net.NameResolution.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Net.NetworkInformation.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Net.Ping.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Net.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Net.Requests.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Net.Security.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Net.Sockets.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Net.WebHeaderCollection.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Net.WebSockets.Client.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Net.WebSockets.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.ObjectModel.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Reflection.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Reflection.Extensions.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Reflection.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Resources.Reader.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Resources.ResourceManager.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Resources.Writer.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Runtime.CompilerServices.VisualC.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Runtime.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Runtime.Extensions.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Runtime.Handles.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Runtime.InteropServices.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Runtime.InteropServices.RuntimeInformation.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Runtime.Numerics.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Runtime.Serialization.Formatters.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Runtime.Serialization.Json.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Runtime.Serialization.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Runtime.Serialization.Xml.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Security.Claims.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Security.Cryptography.Algorithms.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Security.Cryptography.Csp.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Security.Cryptography.Encoding.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Security.Cryptography.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Security.Cryptography.X509Certificates.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Security.Principal.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Security.SecureString.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Text.Encoding.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Text.Encoding.Extensions.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Text.RegularExpressions.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Threading.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Threading.Overlapped.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Threading.Tasks.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Threading.Tasks.Parallel.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Threading.Thread.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Threading.ThreadPool.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Threading.Timer.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.ValueTuple.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Xml.ReaderWriter.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Xml.XDocument.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Xml.XmlDocument.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Xml.XmlSerializer.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Xml.XPath.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/System.Xml.XPath.XDocument.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/RayTracer.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/bin/Debug/RayTracer.pdb
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/obj/Debug/Main.csprojAssemblyReference.cache
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/obj/Debug/Main.exe.config
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/obj/Debug/Main.csproj.CoreCompileInputs.cache
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/obj/Debug/Main.csproj.CopyComplete
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/obj/Debug/Main.exe
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer_Chapter3_Version2/Main/obj/Debug/Main.pdb
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/Main.exe.config
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/Main.exe
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/Main.pdb
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/Microsoft.Win32.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/netstandard.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.AppContext.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Collections.Concurrent.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Collections.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Collections.NonGeneric.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Collections.Specialized.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.ComponentModel.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.ComponentModel.EventBasedAsync.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.ComponentModel.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.ComponentModel.TypeConverter.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Console.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Data.Common.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.Contracts.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.Debug.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.FileVersionInfo.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.Process.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.StackTrace.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.TextWriterTraceListener.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.Tools.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.TraceSource.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.Tracing.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Drawing.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Dynamic.Runtime.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Globalization.Calendars.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Globalization.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Globalization.Extensions.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.IO.Compression.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.IO.Compression.ZipFile.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.IO.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.IO.FileSystem.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.IO.FileSystem.DriveInfo.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.IO.FileSystem.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.IO.FileSystem.Watcher.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.IO.IsolatedStorage.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.IO.MemoryMappedFiles.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.IO.Pipes.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.IO.UnmanagedMemoryStream.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Linq.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Linq.Expressions.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Linq.Parallel.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Linq.Queryable.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Net.Http.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Net.NameResolution.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Net.NetworkInformation.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Net.Ping.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Net.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Net.Requests.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Net.Security.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Net.Sockets.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Net.WebHeaderCollection.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Net.WebSockets.Client.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Net.WebSockets.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.ObjectModel.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Reflection.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Reflection.Extensions.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Reflection.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Resources.Reader.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Resources.ResourceManager.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Resources.Writer.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.CompilerServices.VisualC.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Extensions.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Handles.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.InteropServices.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.InteropServices.RuntimeInformation.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Numerics.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Serialization.Formatters.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Serialization.Json.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Serialization.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Serialization.Xml.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Security.Claims.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Security.Cryptography.Algorithms.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Security.Cryptography.Csp.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Security.Cryptography.Encoding.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Security.Cryptography.Primitives.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Security.Cryptography.X509Certificates.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Security.Principal.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Security.SecureString.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Text.Encoding.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Text.Encoding.Extensions.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Text.RegularExpressions.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Threading.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Threading.Overlapped.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Threading.Tasks.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Threading.Tasks.Parallel.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Threading.Thread.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Threading.ThreadPool.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Threading.Timer.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.ValueTuple.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Xml.ReaderWriter.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Xml.XDocument.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Xml.XmlDocument.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Xml.XmlSerializer.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Xml.XPath.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/System.Xml.XPath.XDocument.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/RayTracer.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/bin/Debug/RayTracer.pdb
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/obj/Debug/Main.csprojAssemblyReference.cache
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/obj/Debug/Main.exe.config
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/obj/Debug/Main.csproj.CoreCompileInputs.cache
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/obj/Debug/Main.csproj.CopyComplete
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/obj/Debug/Main.exe
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/Main/obj/Debug/Main.pdb
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/Main.exe.config
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/Main.exe
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/Main.pdb
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/Microsoft.Win32.Primitives.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/netstandard.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.AppContext.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Collections.Concurrent.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Collections.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Collections.NonGeneric.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Collections.Specialized.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.ComponentModel.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.ComponentModel.EventBasedAsync.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.ComponentModel.Primitives.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.ComponentModel.TypeConverter.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Console.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Data.Common.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.Contracts.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.Debug.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.FileVersionInfo.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.Process.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.StackTrace.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.TextWriterTraceListener.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.Tools.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.TraceSource.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Diagnostics.Tracing.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Drawing.Primitives.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Dynamic.Runtime.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Globalization.Calendars.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Globalization.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Globalization.Extensions.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.IO.Compression.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.IO.Compression.ZipFile.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.IO.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.IO.FileSystem.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.IO.FileSystem.DriveInfo.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.IO.FileSystem.Primitives.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.IO.FileSystem.Watcher.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.IO.IsolatedStorage.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.IO.MemoryMappedFiles.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.IO.Pipes.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.IO.UnmanagedMemoryStream.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Linq.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Linq.Expressions.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Linq.Parallel.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Linq.Queryable.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Net.Http.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Net.NameResolution.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Net.NetworkInformation.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Net.Ping.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Net.Primitives.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Net.Requests.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Net.Security.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Net.Sockets.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Net.WebHeaderCollection.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Net.WebSockets.Client.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Net.WebSockets.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.ObjectModel.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Reflection.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Reflection.Extensions.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Reflection.Primitives.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Resources.Reader.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Resources.ResourceManager.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Resources.Writer.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.CompilerServices.VisualC.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Extensions.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Handles.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.InteropServices.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.InteropServices.RuntimeInformation.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Numerics.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Serialization.Formatters.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Serialization.Json.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Serialization.Primitives.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Runtime.Serialization.Xml.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Security.Claims.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Security.Cryptography.Algorithms.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Security.Cryptography.Csp.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Security.Cryptography.Encoding.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Security.Cryptography.Primitives.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Security.Cryptography.X509Certificates.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Security.Principal.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Security.SecureString.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Text.Encoding.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Text.Encoding.Extensions.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Text.RegularExpressions.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Threading.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Threading.Overlapped.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Threading.Tasks.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Threading.Tasks.Parallel.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Threading.Thread.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Threading.ThreadPool.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Threading.Timer.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.ValueTuple.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Xml.ReaderWriter.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Xml.XDocument.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Xml.XmlDocument.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Xml.XmlSerializer.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Xml.XPath.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/System.Xml.XPath.XDocument.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/RayTracer.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/bin/Debug/RayTracer.pdb
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/obj/Debug/Main.csprojAssemblyReference.cache
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/obj/Debug/Main.exe.config
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/obj/Debug/Main.csproj.CoreCompileInputs.cache
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/obj/Debug/Main.csproj.CopyComplete
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/obj/Debug/Main.exe
+/Users/bre16/Downloads/RayTracer-Aktuell/Main/obj/Debug/Main.pdb

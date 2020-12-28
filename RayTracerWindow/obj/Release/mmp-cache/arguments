@@ -1,0 +1,23 @@
+# Version: 5.2.1.16 (d15-9: 2dc06c71)
+# [first argument, ignore] # /Library/Frameworks/Xamarin.Mac.framework/Versions/5.2.1.16/lib/mmp/mmp.exe
+/Library/Frameworks/Xamarin.Mac.framework/Versions/5.2.1.16/lib/mmp/mmp.exe \
+	/verbose \
+	/output:/Users/TimoEichelmann/Desktop/RayTracer/RayTracerWindow/bin/Release/ \
+	/name:RayTracerWindow \
+	'/profile:Xamarin.Mac,Version=v4.7.1,Profile=Full' \
+	/arch:x86_64 \
+	--http-message-handler=HttpClientHandler \
+	/minos=10.13 \
+	/nolink \
+	/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/4.5/mscorlib.dll \
+	/assembly:/Users/TimoEichelmann/Desktop/RayTracer/RayTracerLogic/bin/Release/RayTracerLogic.dll \
+	/assembly:/Users/TimoEichelmann/Desktop/RayTracer/RayTracerConsole/bin/Release/RayTracerMain.exe \
+	/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/4.5/System.Core.dll \
+	/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/4.5/System.dll \
+	/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/reference/full/Xamarin.Mac.dll \
+	/assembly:/Users/TimoEichelmann/Desktop/RayTracer/RayTracerLogic/bin/Release/RayTracerLogic.dll \
+	/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/reference/full/Xamarin.Mac.dll \
+	/root-assembly:/Users/TimoEichelmann/Desktop/RayTracer/RayTracerWindow/bin/Release/RayTracerWindow.exe \
+	/sdkroot:/Applications/Xcode.app/Contents/Developer \
+	--cache:/Users/TimoEichelmann/Desktop/RayTracer/RayTracerWindow/obj/Release/mmp-cache \
+	@/Users/TimoEichelmann/Desktop/RayTracer/RayTracerWindow/obj/Release/response-file.rsp \

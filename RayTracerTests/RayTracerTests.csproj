@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{173BAE2A-2D3E-448F-A88F-6B02ABD140A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RayTracerTests</RootNamespace>
+    <AssemblyName>RayTracerTests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DefaultWorld.cs" />
+    <Compile Include="MakingASceneTests.cs" />
+    <Compile Include="ReflectionAndRefractionTests.cs" />
+    <Compile Include="PatternTests.cs" />
+    <Compile Include="LightAndShadingTests.cs" />
+    <Compile Include="ShadowsTests.cs" />
+    <Compile Include="PlanesTests.cs" />
+    <Compile Include="RaySphereIntersections.cs" />
+    <Compile Include="TestPattern.cs" />
+    <Compile Include="TransformationTests.cs" />
+    <Compile Include="MatrixTests.cs" />
+    <Compile Include="TupleTests.cs" />
+    <Compile Include="CanvasTests.cs" />
+    <Compile Include="GroupTests.cs" />
+    <Compile Include="TestShape.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RayTracerLogic\RayTracerLogic.csproj">
+      <Project>{8E6A2B58-9F81-4C28-8EDD-43896EF74F47}</Project>
+      <Name>RayTracerLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

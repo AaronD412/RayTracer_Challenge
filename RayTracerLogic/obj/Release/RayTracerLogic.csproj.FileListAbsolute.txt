@@ -1,0 +1,3 @@
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerLogic/bin/Release/RayTracerLogic.dll
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerLogic/obj/Release/RayTracerLogic.csproj.CoreCompileInputs.cache
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerLogic/obj/Release/RayTracerLogic.dll

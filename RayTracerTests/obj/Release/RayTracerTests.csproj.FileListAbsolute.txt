@@ -1,0 +1,8 @@
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerTests/bin/Release/RayTracerTests.dll
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerTests/bin/Release/nunit.framework.dll
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerTests/bin/Release/RayTracerLogic.dll
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerTests/bin/Release/nunit.framework.xml
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerTests/obj/Release/RayTracerTests.csprojAssemblyReference.cache
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerTests/obj/Release/RayTracerTests.csproj.CoreCompileInputs.cache
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerTests/obj/Release/RayTracerTests.csproj.CopyComplete
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerTests/obj/Release/RayTracerTests.dll

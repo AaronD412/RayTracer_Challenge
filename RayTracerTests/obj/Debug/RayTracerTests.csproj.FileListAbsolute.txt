@@ -1,0 +1,44 @@
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerTests/bin/Debug/RayTracerTests.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerTests/bin/Debug/RayTracerTests.pdb
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerTests/bin/Debug/nunit.framework.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerTests/bin/Debug/RayTracerLogic.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerTests/bin/Debug/RayTracerLogic.pdb
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerTests/bin/Debug/nunit.framework.xml
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.csprojAssemblyReference.cache
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.csproj.CoreCompileInputs.cache
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.csproj.CopyComplete
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.pdb
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.csprojAssemblyReference.cache
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.csproj.CoreCompileInputs.cache
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.pdb
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerTests/bin/Debug/RayTracerTests.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerTests/bin/Debug/RayTracerTests.pdb
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerTests/bin/Debug/nunit.framework.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerTests/bin/Debug/RayTracerLogic.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerTests/bin/Debug/RayTracerLogic.pdb
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerTests/bin/Debug/nunit.framework.xml
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.csproj.CopyComplete
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerTests/bin/Debug/RayTracerTests.dll
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerTests/bin/Debug/RayTracerTests.pdb
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerTests/bin/Debug/nunit.framework.dll
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerTests/bin/Debug/RayTracerLogic.dll
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerTests/bin/Debug/RayTracerLogic.pdb
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerTests/bin/Debug/nunit.framework.xml
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.csprojAssemblyReference.cache
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.csproj.CoreCompileInputs.cache
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.csproj.CopyComplete
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.dll
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerTests/obj/Debug/RayTracerTests.pdb
+/Users/timo/Documents/RayTracer/RayTracerTests/obj/Debug/RayTracerTests.csprojAssemblyReference.cache
+/Users/timo/Documents/RayTracer/RayTracerTests/obj/Debug/RayTracerTests.csproj.CoreCompileInputs.cache
+/Users/timo/Documents/RayTracer/RayTracerTests/bin/Debug/RayTracerTests.dll
+/Users/timo/Documents/RayTracer/RayTracerTests/bin/Debug/RayTracerTests.pdb
+/Users/timo/Documents/RayTracer/RayTracerTests/bin/Debug/nunit.framework.dll
+/Users/timo/Documents/RayTracer/RayTracerTests/bin/Debug/RayTracerLogic.dll
+/Users/timo/Documents/RayTracer/RayTracerTests/bin/Debug/RayTracerLogic.pdb
+/Users/timo/Documents/RayTracer/RayTracerTests/bin/Debug/nunit.framework.xml
+/Users/timo/Documents/RayTracer/RayTracerTests/obj/Debug/RayTracerTests.csproj.CopyComplete
+/Users/timo/Documents/RayTracer/RayTracerTests/obj/Debug/RayTracerTests.dll
+/Users/timo/Documents/RayTracer/RayTracerTests/obj/Debug/RayTracerTests.pdb

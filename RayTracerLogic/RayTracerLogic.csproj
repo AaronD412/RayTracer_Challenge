@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E6A2B58-9F81-4C28-8EDD-43896EF74F47}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RayTracerLogic</RootNamespace>
+    <AssemblyName>RayTracerLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vector.cs" />
+    <Compile Include="World.cs" />
+    <Compile Include="Tuple.cs" />
+    <Compile Include="StripePattern.cs" />
+    <Compile Include="Sphere.cs" />
+    <Compile Include="SceneObject.cs" />
+    <Compile Include="PreparedIntersection.cs" />
+    <Compile Include="Ray.cs" />
+    <Compile Include="RingPattern.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="PointLight.cs" />
+    <Compile Include="Plane.cs" />
+    <Compile Include="Matrix.cs" />
+    <Compile Include="Material.cs" />
+    <Compile Include="Pattern.cs" />
+    <Compile Include="GradientPattern.cs" />
+    <Compile Include="Intersections.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="Intersection.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="CheckersPattern.cs" />
+    <Compile Include="Canvas.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="Shape.cs" />
+    <Compile Include="BoundingBox.cs" />
+    <Compile Include="Shapes.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

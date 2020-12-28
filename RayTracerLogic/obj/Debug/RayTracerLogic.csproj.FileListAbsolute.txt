@@ -1,0 +1,23 @@
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerLogic/bin/Debug/RayTracerLogic.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerLogic/bin/Debug/RayTracerLogic.pdb
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerLogic/obj/Debug/RayTracerLogic.csproj.CoreCompileInputs.cache
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerLogic/obj/Debug/RayTracerLogic.dll
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerLogic/obj/Debug/RayTracerLogic.pdb
+/Users/bre16/Downloads/RayTracer-Aktuell/RayTracerLogic/obj/Debug/RayTracerLogic.csprojAssemblyReference.cache
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerLogic/bin/Debug/RayTracerLogic.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerLogic/bin/Debug/RayTracerLogic.pdb
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerLogic/obj/Debug/RayTracerLogic.csprojAssemblyReference.cache
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerLogic/obj/Debug/RayTracerLogic.csproj.CoreCompileInputs.cache
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerLogic/obj/Debug/RayTracerLogic.dll
+/Users/TimoEichelmann/Documents/Torsten und Timo/Ray Tracer/RayTracer-Aktuell/RayTracerLogic/obj/Debug/RayTracerLogic.pdb
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerLogic/bin/Debug/RayTracerLogic.dll
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerLogic/bin/Debug/RayTracerLogic.pdb
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerLogic/obj/Debug/RayTracerLogic.csproj.CoreCompileInputs.cache
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerLogic/obj/Debug/RayTracerLogic.dll
+C:/Users/Torsten Bresser/Desktop/drive-download-20190323T175022Z-001/Grafiken/RayTracer-Aktuell/RayTracerLogic/obj/Debug/RayTracerLogic.pdb
+/Users/timo/Documents/RayTracer/RayTracerLogic/obj/Debug/RayTracerLogic.csprojAssemblyReference.cache
+/Users/timo/Documents/RayTracer/RayTracerLogic/obj/Debug/RayTracerLogic.csproj.CoreCompileInputs.cache
+/Users/timo/Documents/RayTracer/RayTracerLogic/bin/Debug/RayTracerLogic.dll
+/Users/timo/Documents/RayTracer/RayTracerLogic/bin/Debug/RayTracerLogic.pdb
+/Users/timo/Documents/RayTracer/RayTracerLogic/obj/Debug/RayTracerLogic.dll
+/Users/timo/Documents/RayTracer/RayTracerLogic/obj/Debug/RayTracerLogic.pdb

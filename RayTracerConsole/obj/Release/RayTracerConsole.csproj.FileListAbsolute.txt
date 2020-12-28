@@ -1,0 +1,9 @@
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerConsole/bin/Release/RayTracerMain.exe.config
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerConsole/bin/Release/RayTracerMain.exe
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerConsole/bin/Release/RayTracerMain.pdb
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerConsole/bin/Release/RayTracerLogic.dll
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerConsole/obj/Release/RayTracerConsole.csprojAssemblyReference.cache
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerConsole/obj/Release/RayTracerConsole.csproj.CoreCompileInputs.cache
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerConsole/obj/Release/RayTracerConsole.csproj.CopyComplete
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerConsole/obj/Release/RayTracerMain.exe
+/Users/TimoEichelmann/Desktop/RayTracer/RayTracerConsole/obj/Release/RayTracerMain.pdb
