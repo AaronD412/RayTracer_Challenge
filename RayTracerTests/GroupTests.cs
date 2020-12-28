@@ -107,5 +107,27 @@ namespace RayTracerTests
             Assert.AreEqual(2, intersections.Count);
         }
 
+        [Test()]
+        public void ConvertingAPointFromWorldToObjectSpace()
+        {
+            // Given
+            Sphere sphere = new Sphere();
+            sphere.Transform = Matrix.NewTranslationMatrix(5, 0, 0);
+
+            Group group2 = new Group();
+            group2.Transform = Matrix.NewScalingMatrix(2, 2, 2);
+            group2.AddChild(sphere);
+
+            Group group1 = new Group();
+            group1.Transform = Matrix.NewRotationYMatrix(System.Math.PI / 2);
+            group1.AddChild(group2);
+
+            // When
+            Point point = sphere.ConvertWorldPointToObjectPoint(new Point(-2, 0, -10));
+
+            // Then
+            Assert.IsTrue(point.NearlyEquals(new Point(0, 0, -1)));
+        }
+
     }
 }
