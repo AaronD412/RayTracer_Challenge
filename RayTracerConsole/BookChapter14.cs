@@ -32,8 +32,8 @@ namespace RayTracerConsole
         {
             public Shape HexagonCorner()
             {
-                Shape corner = new Shape();
-                corner.Transform = 
+                Sphere corner = new Sphere();
+                corner.Transform = Matrix.NewTranslationMatrix()
             }
 
             return world;
