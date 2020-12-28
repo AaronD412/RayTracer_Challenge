@@ -46,10 +46,10 @@ namespace RayTracerConsole
                     if (hit != null)
                     {
                         Point point = ray.GetPosition(hit.Distance);
-                        Vector normal = hit.SceneObject.GetNormalAt(point);
+                        Vector normal = hit.Shape.GetNormalAt(point);
                         Vector eye = -ray.Direction;
 
-                        Color color = hit.SceneObject.Material.GetLighting(sphere, light, point, eye, normal, false);
+                        Color color = hit.Shape.Material.GetLighting(sphere, light, point, eye, normal, false);
 
                         canvas[x, y] = color;
                     }

@@ -20,7 +20,7 @@ namespace RayTracerTests
         public void PrecomputingTheReflectionVector()
         {
             // Given
-            SceneObject shape = new Plane();
+            Shape shape = new Plane();
             Ray ray = new Ray(new Point(0, 1, -1), new Vector(0, -System.Math.Sqrt(2) / 2, System.Math.Sqrt(2) / 2));
             Intersection intersection = new Intersection(System.Math.Sqrt(2), shape);
 
@@ -38,7 +38,7 @@ namespace RayTracerTests
             World defaultWorld = DefaultWorld.NewDefaultWorld();
             Ray ray = new Ray(new Point(0, 0, 0), new Vector(0, 0, 1));
 
-            SceneObject shape = defaultWorld.SceneObjects[1];
+            Shape shape = defaultWorld.Shape[1];
             shape.Material.Ambient = 1;
 
             Intersection intersection = new Intersection(1, shape);
@@ -57,10 +57,10 @@ namespace RayTracerTests
             // Given
             World defaultWorld = DefaultWorld.NewDefaultWorld();
 
-            SceneObject shape = new Plane();
+            Shape shape = new Plane();
             shape.Material.Reflective = 0.5;
             shape.Transform = shape.Transform.Translate(0, -1, 0);
-            defaultWorld.SceneObjects.Add(shape);
+            defaultWorld.Shape.Add(shape);
 
             Ray ray = new Ray(new Point(0, 0, -3), new Vector(0, -System.Math.Sqrt(2) / 2, System.Math.Sqrt(2) / 2));
             Intersection intersection = new Intersection(System.Math.Sqrt(2), shape);
@@ -79,10 +79,10 @@ namespace RayTracerTests
             // Given
             World defaultWorld = DefaultWorld.NewDefaultWorld();
 
-            SceneObject shape = new Plane();
+            Shape shape = new Plane();
             shape.Material.Reflective = 0.5;
             shape.Transform = shape.Transform.Translate(0, -1, 0);
-            defaultWorld.SceneObjects.Add(shape);
+            defaultWorld.Shape.Add(shape);
 
             Ray ray = new Ray(new Point(0, 0, -3), new Vector(0, -System.Math.Sqrt(2) / 2, System.Math.Sqrt(2) / 2));
             Intersection intersection = new Intersection(System.Math.Sqrt(2), shape);
@@ -103,15 +103,15 @@ namespace RayTracerTests
 
             world.LightSources.Add(new PointLight(new Point(0, 0, 0), Color.GetWhite()));
 
-            SceneObject lower = new Plane();
+            Shape lower = new Plane();
             lower.Material.Reflective = 1;
             lower.Transform = lower.Transform.Translate(0, -1, 0);
-            world.SceneObjects.Add(lower);
+            world.Shape.Add(lower);
 
-            SceneObject upper = new Plane();
+            Shape upper = new Plane();
             upper.Material.Reflective = 1;
             upper.Transform = upper.Transform.Translate(0, 1, 0);
-            world.SceneObjects.Add(upper);
+            world.Shape.Add(upper);
 
             Ray ray = new Ray(new Point(0, 0, 0), new Vector(0, 1, 0));
 
@@ -127,10 +127,10 @@ namespace RayTracerTests
             // Given
             World defaultWorld = DefaultWorld.NewDefaultWorld();
 
-            SceneObject shape = new Plane();
+            Shape shape = new Plane();
             shape.Material.Reflective = 0.5;
             shape.Transform = shape.Transform.Translate(0, -1, 0);
-            defaultWorld.SceneObjects.Add(shape);
+            defaultWorld.Shape.Add(shape);
 
             Ray ray = new Ray(new Point(0, 0, -3), new Vector(0, -System.Math.Sqrt(2) / 2, System.Math.Sqrt(2) / 2));
 
@@ -159,7 +159,7 @@ namespace RayTracerTests
         public void AHelperForProducingASphereWithAGlassyMaterial()
         {
             // Given
-            SceneObject sphere = Sphere.NewGlassSphere();
+            Shape sphere = Sphere.NewGlassSphere();
 
             // Then
             Assert.IsTrue(sphere.Transform.NearlyEquals(Matrix.NewIdentityMatrix(4)));
@@ -171,15 +171,15 @@ namespace RayTracerTests
         public void FindingN1AndN2AtVariousIntersections()
         {
             // Given
-            SceneObject shapeA = Sphere.NewGlassSphere();
+            Shape shapeA = Sphere.NewGlassSphere();
             shapeA.Transform = Matrix.NewScalingMatrix(2, 2, 2);
             shapeA.Material.RefractiveIndex = 1.5;
 
-            SceneObject shapeB = Sphere.NewGlassSphere();
+            Shape shapeB = Sphere.NewGlassSphere();
             shapeB.Transform = Matrix.NewTranslationMatrix(0, 0, -0.25);
             shapeB.Material.RefractiveIndex = 2.0;
 
-            SceneObject shapeC = Sphere.NewGlassSphere();
+            Shape shapeC = Sphere.NewGlassSphere();
             shapeC.Transform = Matrix.NewTranslationMatrix(0, 0, 0.25);
             shapeC.Material.RefractiveIndex = 2.5;
 
@@ -223,7 +223,7 @@ namespace RayTracerTests
             // Given
             Ray ray = new Ray(new Point(0, 0, -5), new Vector(0, 0, 1));
 
-            SceneObject shape = Sphere.NewGlassSphere();
+            Shape shape = Sphere.NewGlassSphere();
             shape.Transform = Matrix.NewTranslationMatrix(0, 0, 1);
 
             Intersection intersection = new Intersection(5, shape);
@@ -242,7 +242,7 @@ namespace RayTracerTests
         {
             // Given
             World defaultWorld = DefaultWorld.NewDefaultWorld();
-            SceneObject shape = defaultWorld.SceneObjects[0];
+            Shape shape = defaultWorld.Shape[0];
             Ray ray = new Ray(new Point(0, 0, -5), new Vector(0, 0, 1));
 
             Intersections intersections = new Intersections(
@@ -264,7 +264,7 @@ namespace RayTracerTests
             // Given
             World world = DefaultWorld.NewDefaultWorld();
 
-            SceneObject shape = world.SceneObjects[0];
+            Shape shape = world.Shape[0];
             shape.Material.Transparency = 1.0;
             shape.Material.RefractiveIndex = 1.5;
 
@@ -288,7 +288,7 @@ namespace RayTracerTests
             // Given
             World world = DefaultWorld.NewDefaultWorld();
 
-            SceneObject shape = world.SceneObjects[0];
+            Shape shape = world.Shape[0];
             shape.Material.Transparency = 1.0;
             shape.Material.RefractiveIndex = 1.5;
 
@@ -314,11 +314,11 @@ namespace RayTracerTests
             // Given
             World world = DefaultWorld.NewDefaultWorld();
 
-            SceneObject shapeA = world.SceneObjects[0];
+            Shape shapeA = world.Shape[0];
             shapeA.Material.Ambient = 1.0;
             shapeA.Material.Pattern = new TestPattern();
 
-            SceneObject shapeB = world.SceneObjects[1];
+            Shape shapeB = world.Shape[1];
             shapeB.Material.Transparency = 1.0;
             shapeB.Material.RefractiveIndex = 1.5;
 
@@ -350,14 +350,14 @@ namespace RayTracerTests
             floor.Material.Transparency = 0.5;
             floor.Material.RefractiveIndex = 1.5;
 
-            world.SceneObjects.Add(floor);
+            world.Shape.Add(floor);
 
-            SceneObject ball = new Sphere();
+            Shape ball = new Sphere();
             ball.Material.Color = new Color(1, 0, 0);
             ball.Material.Ambient = 0.5;
             ball.Transform = Matrix.NewTranslationMatrix(0, -3.5, -0.5);
 
-            world.SceneObjects.Add(ball);
+            world.Shape.Add(ball);
 
             Ray ray = new Ray(new Point(0, 0, -3), new Vector(0, -System.Math.Sqrt(2) / 2, System.Math.Sqrt(2) / 2));
             Intersections intersections = new Intersections(new Intersection(System.Math.Sqrt(2), floor));
@@ -374,7 +374,7 @@ namespace RayTracerTests
         public void TheSchlickApproximationUnderTotalInternalReflection()
         {
             // Given
-            SceneObject shape = Sphere.NewGlassSphere();
+            Shape shape = Sphere.NewGlassSphere();
             Ray ray = new Ray(new Point(0, 0, System.Math.Sqrt(2) / 2), new Vector(0, 1, 0));
 
             Intersections intersections = new Intersections(
@@ -394,7 +394,7 @@ namespace RayTracerTests
         public void TheSchlickApproximationWithAPerpendicularviewingAngle()
         {
             // Given
-            SceneObject shape = Sphere.NewGlassSphere();
+            Shape shape = Sphere.NewGlassSphere();
             Ray ray = new Ray(new Point(0, 0, 0), new Vector(0, 1, 0));
             Intersections intersections = new Intersections(
                 new Intersection(-1, shape),
@@ -413,7 +413,7 @@ namespace RayTracerTests
         public void TheSchlickApproximationWithSmallAngleAndN1BiggerThenN2()
         {
             // Given
-            SceneObject shape = Sphere.NewGlassSphere();
+            Shape shape = Sphere.NewGlassSphere();
             Ray ray = new Ray(new Point(0, 0.99, -2), new Vector(0, 0, 1));
             Intersections intersections = new Intersections(new Intersection(1.8589, shape));
 
@@ -438,14 +438,14 @@ namespace RayTracerTests
             floor.Material.Transparency = 0.5;
             floor.Material.RefractiveIndex = 1.5;
 
-            world.SceneObjects.Add(floor);
+            world.Shape.Add(floor);
 
             Sphere ball = new Sphere();
             ball.Material.Color = new Color(1, 0, 0);
             ball.Material.Ambient = 0.5;
             ball.Transform = Matrix.NewTranslationMatrix(0, -3.5, -0.5);
 
-            world.SceneObjects.Add(ball);
+            world.Shape.Add(ball);
 
             Intersections intersections = new Intersections(new Intersection(System.Math.Sqrt(2), floor));
 

@@ -8,18 +8,25 @@ namespace RayTracerTests
         {
             World defaultWorld = new World();
 
-            defaultWorld.LightSources.Add(new PointLight(new Point(-10, 10, -10), new Color(1, 1, 1)));
+            PointLight pointLight = new PointLight(
+                new Point(-10, 10, -10),
+                Color.GetWhite());
 
-            Sphere sphereOne = new Sphere();
-            sphereOne.Material.Color = new Color(0.8, 1.0, 0.6);
-            sphereOne.Material.Diffuse = 0.7;
-            sphereOne.Material.Specular = 0.2;
+            defaultWorld.LightSources.Add(pointLight);
 
-            Sphere sphereTwo = new Sphere();
-            sphereTwo.Transform = sphereTwo.Transform.Scale(0.5, 0.5, 0.5);
+            Sphere sphere1 = new Sphere();
 
-            defaultWorld.SceneObjects.Add(sphereOne);
-            defaultWorld.SceneObjects.Add(sphereTwo);
+            sphere1.Material.Color = new Color(0.8, 1.0, 0.6);
+            sphere1.Material.Diffuse = 0.7;
+            sphere1.Material.Specular = 0.2;
+
+            defaultWorld.Shape.Add(sphere1);
+
+            Sphere sphere2 = new Sphere();
+
+            sphere2.Transform = Matrix.NewScalingMatrix(0.5, 0.5, 0.5);
+
+            defaultWorld.Shape.Add(sphere2);
 
             return defaultWorld;
         }

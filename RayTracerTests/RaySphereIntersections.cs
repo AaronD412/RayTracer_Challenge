@@ -123,7 +123,7 @@ namespace RayTracerTests
 
             // Then
             Assert.IsTrue(intersection.Distance.NearlyEquals(3.5));
-            Assert.AreSame(sphere, intersection.SceneObject);
+            Assert.AreSame(sphere, intersection.Shape);
         }
 
         [Test()]
@@ -155,8 +155,8 @@ namespace RayTracerTests
 
             // Then
             Assert.AreEqual(2, intersections.Count);
-            Assert.AreSame(sphere, intersections[0].SceneObject);
-            Assert.AreSame(sphere, intersections[1].SceneObject);
+            Assert.AreSame(sphere, intersections[0].Shape);
+            Assert.AreSame(sphere, intersections[1].Shape);
         }
 
         [Test()]

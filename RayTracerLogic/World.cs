@@ -13,7 +13,7 @@ namespace RayTracerLogic
         /// <summary>
         /// The scene objects.
         /// </summary>
-        private List<SceneObject> sceneObjects = new List<SceneObject>();
+        private List<Shape> shape = new List<Shape>();
 
         /// <summary>
         /// The light sources.
@@ -33,9 +33,9 @@ namespace RayTracerLogic
         {
             Intersections intersections = new Intersections();
 
-            foreach (SceneObject sceneObject in sceneObjects)
+            foreach (Shape shape in shape)
             {
-                intersections.AddRange(sceneObject.GetIntersections(ray));
+                intersections.AddRange(shape.GetIntersections(ray));
             }
 
             intersections.Sort((x, y) => x.Distance.CompareTo(y.Distance));
@@ -164,7 +164,7 @@ namespace RayTracerLogic
                 return Color.GetBlack();
             }
 
-            if (preparedIntersection.SceneObject.Material.Transparency.CompareTo(0) == 0)
+            if (preparedIntersection.Shape.Material.Transparency.CompareTo(0) == 0)
             {
                 return Color.GetBlack();
             }
@@ -198,7 +198,7 @@ namespace RayTracerLogic
 
             // Find the color of the refracted ray, making sure to multiply
             // by the transparency value to account for any opacity.
-            Color color = GetColorAt(refractedRay, remaining - 1) * preparedIntersection.SceneObject.Material.Transparency;
+            Color color = GetColorAt(refractedRay, remaining - 1) * preparedIntersection.Shape.Material.Transparency;
 
             return color;
         }
@@ -211,11 +211,11 @@ namespace RayTracerLogic
         /// Gets the scene objects.
         /// </summary>
         /// <value>The scene objects.</value>
-        public List<SceneObject> SceneObjects
+        public List<Shape> Shape
         {
             get
             {
-                return sceneObjects;
+                return shape;
             }
         }
 
