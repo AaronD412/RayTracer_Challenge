@@ -156,5 +156,27 @@ namespace RayTracerTests
             // Then
             Assert.IsTrue(normalVector.NearlyEquals(new Vector(0.2857, 0.4286, -0.8571)));
         }
+
+        [Test()]
+        public void FindingTheNormalOnAChildObject()
+        {
+            // Given
+            Sphere sphere = new Sphere();
+            sphere.Transform = Matrix.NewTranslationMatrix(5, 0, 0);
+
+            Group group2 = new Group();
+            group2.Transform = Matrix.NewScalingMatrix(1, 2, 3);
+            group2.AddChild(sphere);
+
+            Group group1 = new Group();
+            group1.Transform = Matrix.NewRotationYMatrix(System.Math.PI / 2);
+            group1.AddChild(group2);
+
+            // When
+            Vector normalVector = sphere.GetNormalAt(new Point(1.7321, 1.1547, -5.5774));
+
+            // Then
+            Assert.IsTrue(normalVector.NearlyEquals(new Vector(0.2857, 0.4286, -0.8571)));
+        }
     }
 }
