@@ -14,11 +14,9 @@ namespace RayTracerLogic
         /// </summary>
         /// <returns>The normal at local.</returns>
         /// <param name="objectPoint">Object point.</param>
-        public override Vector GetNormalAtLocal(Point objectPoint)
+        public override Vector GetNormalAtLocal(Point objectPoint, Intersection hit = null)
         {
-            Vector objectNormal = objectPoint - new Point(0, 0, 0);
-
-            return objectNormal;
+            return new Vector(objectPoint.X, objectPoint.Y, objectPoint.Z);
         }
 
         /// <summary>
