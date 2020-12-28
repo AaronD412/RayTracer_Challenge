@@ -78,7 +78,7 @@ namespace RayTracerConsole
         /// <returns>The camera.</returns>
         public Camera GetCamera()
         {
-            Camera camera = new Camera(1080, 720, System.Math.PI / 3);
+            Camera camera = new Camera(480, 320, System.Math.PI / 3);
 
             camera.Transform = new Point(0, 1.5, -5).GetViewTransform(new Point(0, 1, 0), new Vector(0, 1, 0));
 
