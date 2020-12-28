@@ -5,7 +5,7 @@ namespace RayTracerLogic
     /// <summary>
     /// Represents a sphere at the Point(0, 0, 0) with a radius of 1
     /// </summary>
-    public class Sphere : SceneObject
+    public class Sphere : Shape
     {
         #region Public Methods
 
