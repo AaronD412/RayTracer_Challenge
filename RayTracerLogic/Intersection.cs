@@ -96,7 +96,7 @@ namespace RayTracerLogic
                 shape,
                 point,
                 -ray.Direction,
-                sceneObject.GetNormalAt(point),
+                shape.GetNormalAt(point),
                 n1,
                 n2
             );

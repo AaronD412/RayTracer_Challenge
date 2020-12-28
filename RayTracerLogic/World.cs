@@ -55,8 +55,8 @@ namespace RayTracerLogic
 
             foreach (PointLight lightSource in lightSources)
             {
-                surface += preparedIntersection.SceneObject.Material.GetLighting(
-                    preparedIntersection.SceneObject,
+                surface += preparedIntersection.Shape.Material.GetLighting(
+                    preparedIntersection.Shape,
                     lightSource,
                     preparedIntersection.OverPoint,
                     preparedIntersection.EyeVector,
@@ -68,7 +68,7 @@ namespace RayTracerLogic
             Color reflected = GetReflectedColor(preparedIntersection, remaining);
             Color refracted = GetRefractedColor(preparedIntersection, remaining);
 
-            Material material = preparedIntersection.SceneObject.Material;
+            Material material = preparedIntersection.Shape.Material;
 
             if (material.Reflective > 0 && material.Transparency > 0)
             {
@@ -113,7 +113,7 @@ namespace RayTracerLogic
                 return Color.GetBlack();
             }
 
-            if (preparedIntersection.SceneObject.Material.Reflective.CompareTo(0) == 0)
+            if (preparedIntersection.Shape.Material.Reflective.CompareTo(0) == 0)
             {
                 return Color.GetBlack();
             }
@@ -121,7 +121,7 @@ namespace RayTracerLogic
             Ray reflectRay = new Ray(preparedIntersection.OverPoint, preparedIntersection.ReflectVector);
             Color color = GetColorAt(reflectRay, remaining - 1);
 
-            return color * preparedIntersection.SceneObject.Material.Reflective;
+            return color * preparedIntersection.Shape.Material.Reflective;
         }
 
         /// <summary>

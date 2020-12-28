@@ -17,7 +17,7 @@ namespace RayTracerLogic
         /// <summary>
         /// The scene object.
         /// </summary>
-        private SceneObject sceneObject;
+        private Shape shape;
 
         /// <summary>
         /// The point.
@@ -73,7 +73,7 @@ namespace RayTracerLogic
         /// </summary>
         /// <param name="distance">Distance.</param>
         /// <param name="sceneObject">Scene object.</param>
-        public PreparedIntersection(double distance, SceneObject sceneObject, Point point, Vector eyeVector, Vector normalVector, double n1, double n2)
+        public PreparedIntersection(double distance, Shape shape, Point point, Vector eyeVector, Vector normalVector, double n1, double n2)
         {
             if (normalVector.Dot(eyeVector) < 0)
             {
@@ -89,7 +89,7 @@ namespace RayTracerLogic
             underPoint = point - normalVector * Constants.Epsilon;
 
             this.distance = distance;
-            this.sceneObject = sceneObject;
+            this.shape = shape;
             this.point = point;
             this.eyeVector = eyeVector;
             this.normalVector = normalVector;
@@ -156,11 +156,11 @@ namespace RayTracerLogic
         /// Gets the scene object.
         /// </summary>
         /// <value>The scene object.</value>
-        public SceneObject SceneObject
+        public Shape Shape
         {
             get
             {
-                return sceneObject;
+                return shape;
             }
         }
 
