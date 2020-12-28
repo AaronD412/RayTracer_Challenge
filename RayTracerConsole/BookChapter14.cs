@@ -98,4 +98,3 @@ namespace RayTracerConsole
         }
     }
 }
->>>>>>> a8c9a2bb7b449cb92d7607bbba3d9a46e9f93295
