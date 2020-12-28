@@ -43,7 +43,7 @@ namespace RayTracerLogic
         /// </summary>
         /// <returns>The intersections.</returns>
         /// <param name="ray">Ray.</param>
-        protected override Intersections GetIntersectionsLocal(Ray localRay)
+        public override Intersections GetIntersectionsLocal(Ray localRay)
         {
             // The vector from the sphere's center, to the ray origin.
             // Remember: the sphere is centered at the world origin.
