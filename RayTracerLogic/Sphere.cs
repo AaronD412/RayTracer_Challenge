@@ -71,6 +71,13 @@ namespace RayTracerLogic
             );
         }
 
+        public override BoundingBox GetBoundingBox()
+        {
+            return new BoundingBox(
+                new Point(-1, -1, -1),
+                new Point(1, 1, 1);
+        }
+
         /// <summary>
         /// Nearlies the equals local.
         /// </summary>
