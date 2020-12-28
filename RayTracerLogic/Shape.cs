@@ -85,7 +85,6 @@
 
         public abstract Vector GetNormalAtLocal(Point point, Intersection intersection);
 
-        // ToDoBre16: Ggf. internal machen
         public abstract Intersections GetIntersectionsLocal(Ray ray);
 
         public abstract BoundingBox GetBoundingBox();
