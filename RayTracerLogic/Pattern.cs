@@ -22,9 +22,9 @@
         /// <returns>The pattern at object.</returns>
         /// <param name="sceneObject">Scene object.</param>
         /// <param name="worldPoint">World point.</param>
-        public Color GetPatternAtObject(SceneObject sceneObject, Point worldPoint)
+        public Color GetPatternAtObject(Shape shape, Point worldPoint)
         {
-            Point objectPoint = sceneObject.Transform.GetInverse() * worldPoint;
+            Point objectPoint = shape.Transform.GetInverse() * worldPoint;
             Point patternPoint = this.Transform.GetInverse() * objectPoint;
 
             return GetPatternAt(patternPoint);
