@@ -60,6 +60,7 @@
     <Compile Include="Shape.cs" />
     <Compile Include="BoundingBox.cs" />
     <Compile Include="Shapes.cs" />
+    <Compile Include="Cylinder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
