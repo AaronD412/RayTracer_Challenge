@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-﻿
-=======
-﻿using RayTracerLogic;
+using RayTracerLogic;
 
 namespace RayTracerConsole
 {
