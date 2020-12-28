@@ -5,7 +5,7 @@ namespace RayTracerConsole
     /// <summary>
     /// Creates the result oft the eleventh chapter.
     /// </summary>
-    public class BookChapter11
+    public class BookChapter14
     {
         /// <summary>
         /// Run this instance.
