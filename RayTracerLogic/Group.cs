@@ -40,12 +40,21 @@ namespace RayTracerLogic
 
         public override Intersections GetIntersectionsLocal(Ray ray)
         {
-            throw new NotImplementedException();
+            Intersections intersections = new Intersections();
+
+            foreach (Shape child in children)
+            {
+                intersections.AddRange(child.GetIntersections(ray));    
+            }
+
+            intersections.Sort((x, y) => x.Distance.CompareTo(y.Distance));
+
+            return intersections;
         }
 
-        public override Vector GetNormalAtLocal(Point point, Intersection intersection)
+        public override Vector GetNormalAtLocal(Point point, Intersection hit = null)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("This method should be never called!");
         }
 
         protected override bool NearlyEqualsLocal(Shape shape)
