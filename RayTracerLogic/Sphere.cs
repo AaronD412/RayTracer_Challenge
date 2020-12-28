@@ -75,7 +75,7 @@ namespace RayTracerLogic
         {
             return new BoundingBox(
                 new Point(-1, -1, -1),
-                new Point(1, 1, 1);
+                new Point(1, 1, 1));
         }
 
         /// <summary>
