@@ -71,9 +71,9 @@ namespace RayTracerTests
             sphere_2.Transform = Matrix.NewTranslationMatrix(0, 0, -3);
             sphere_3.Transform = Matrix.NewTranslationMatrix(5, 0, 0);
 
-            group.AddChildren(sphere_1);
-            group.AddChildren(sphere_2);
-            group.AddChildren(sphere_3);
+            group.AddChild(sphere_1);
+            group.AddChild(sphere_2);
+            group.AddChild(sphere_3);
 
             // When
             Ray ray = new Ray(new Point(0, 0, -5), new Vector(0, 0, 1));
