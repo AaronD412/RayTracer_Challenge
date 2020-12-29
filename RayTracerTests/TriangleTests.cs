@@ -25,5 +25,22 @@ namespace RayTracerTests
             Assert.IsTrue(triangle.EdgeVector2.NearlyEquals(new Vector(1, -1, 0)));
             Assert.IsTrue(triangle.NormalVector.NearlyEquals(new Vector(0, 0, -1)));
         }
+
+        [Test()]
+        public void FindingTheNormalOnATriangle()
+        {
+            // Given
+            Triangle triangle = new Triangle(new Point(0, 1, 0), new Point(-1, 0, 0), new Point(1, 0, 0));
+
+            // When
+            Vector n1 = triangle.GetNormalAtLocal(new Point(0, 0.5, 0));
+            Vector n2 = triangle.GetNormalAtLocal(new Point(-0.5, 0.75, 0));
+            Vector n3 = triangle.GetNormalAtLocal(new Point(0.5, 0.25, 0));
+
+            // Then
+            Assert.AreSame(n1, triangle.NormalVector);
+            Assert.AreSame(n2, triangle.NormalVector);
+            Assert.AreSame(n3, triangle.NormalVector);
+        }
     }
 }
