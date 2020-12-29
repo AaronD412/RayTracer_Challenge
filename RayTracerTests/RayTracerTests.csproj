@@ -47,6 +47,7 @@
     <Compile Include="CanvasTests.cs" />
     <Compile Include="GroupTests.cs" />
     <Compile Include="TestShape.cs" />
+    <Compile Include="TriangleTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
