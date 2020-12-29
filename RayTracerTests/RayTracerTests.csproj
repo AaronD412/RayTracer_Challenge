@@ -50,6 +50,7 @@
     <Compile Include="TriangleTests.cs" />
     <Compile Include="OBJParserTests.cs" />
     <Compile Include="SmoothTriangleTests.cs" />
+    <Compile Include="CubesTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
