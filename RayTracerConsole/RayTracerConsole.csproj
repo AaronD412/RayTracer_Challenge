@@ -62,6 +62,7 @@
     <Compile Include="TermPaperChapter07_06.cs" />
     <Compile Include="TermPaperChapter02_10.cs" />
     <Compile Include="BookChapter14.cs" />
+    <Compile Include="BookChapter15.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
