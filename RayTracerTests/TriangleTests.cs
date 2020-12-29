@@ -57,5 +57,20 @@ namespace RayTracerTests
             // Then
             Assert.IsEmpty(intersections);
         }
+
+        [Test()]
+        public void ARayMissesTheP1ToP3Edge()
+        {
+            // Given
+            Triangle triangle = new Triangle(new Point(0, 1, 0), new Point(-1, 0, 0), new Point(1, 0, 0));
+
+            Ray ray = new Ray(new Point(1, 1, -2), new Vector(0, 0, 1));
+
+            //When
+            Intersections intersections = triangle.GetIntersectionsLocal(ray);
+
+            //Then
+            Assert.IsEmpty(intersections);
+        }
     }
 }
