@@ -12,7 +12,7 @@ namespace RayTracerConsole
         /// </summary>
         public void Run()
         {
-            System.Console.WriteLine("'Putting it together' example (book chapter 11)");
+            System.Console.WriteLine("'Putting it together' example (book chapter 12)");
 
             World world = GetWorld();
             Camera camera = GetCamera();
@@ -20,8 +20,8 @@ namespace RayTracerConsole
             // Render the result to a canvas.
             Canvas canvas = camera.Render(world);
 
-            canvas.ToPpm("book-chapter11-reflection-and-refraction.ppm");
-            System.Console.WriteLine("    book-chapter11-reflection-and-refraction.ppm successfully written.");
+            canvas.ToPpm("book-chapter12-cubes.ppm");
+            System.Console.WriteLine("    book-chapter12-cubes.ppm successfully written.");
         }
 
         /// <summary>
