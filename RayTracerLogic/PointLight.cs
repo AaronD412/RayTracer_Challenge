@@ -1,31 +1,16 @@
 ﻿namespace RayTracerLogic
 {
-    /// <summary>
-    /// Represents the PointLight, which is sent through the spheres.
-    /// </summary>
-    public class PointLight
+    public class PointLight : ILightSource
     {
         #region Private Members
 
-        /// <summary>
-        /// The position.
-        /// </summary>
-        private Point position;
-
-        /// <summary>
-        /// The intensity.
-        /// </summary>
-        private Color intensity;
+        private readonly Point position;
+        private readonly Color intensity;
 
         #endregion
 
         #region Public Constructors
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="T:RayTracerLogic.PointLight"/> class.
-        /// </summary>
-        /// <param name="position">Position.</param>
-        /// <param name="intensity">Intensity.</param>
         public PointLight(Point position, Color intensity)
         {
             this.position = position;
@@ -36,25 +21,53 @@
 
         #region Public Methods
 
-        /// <summary>
-        /// Proofs if the light in the scene is nearly the pointlight.
-        /// </summary>
-        /// <returns><c>true</c>, if equals was nearlyed, <c>false</c> otherwise.</returns>
-        /// <param name="light">Light.</param>
-        public bool NearlyEquals(PointLight light)
+        public bool NearlyEquals(ILightSource lightSource)
         {
-            return position.NearlyEquals(light.Position) &&
-                intensity.NearlyEquals(light.Intensity);
+            if (lightSource == null)
+            {
+                return false;
+            }
+
+            PointLight pointLight = lightSource as PointLight;
+
+            if (pointLight == null)
+            {
+                return false;
+            }
+
+            return Position.NearlyEquals(pointLight.Position) &&
+                Intensity.NearlyEquals(pointLight.Intensity);
+        }
+
+        public double GetIntensityAt(Point point, World world)
+        {
+            double intensity = 0;
+
+            foreach (ILightSource lightSource in world.LightSources)
+            {
+                if (!world.IsShadowed(lightSource.Position, point))
+                {
+                    intensity += 1;
+                }
+            }
+
+            if (world.LightSources.Count == 0)
+            {
+                return 0;
+            }
+
+            return intensity / world.LightSources.Count;
+        }
+
+        public Point GetPointOnLight(int u, int v)
+        {
+            return position;
         }
 
         #endregion
 
         #region Public Properties
 
-        /// <summary>
-        /// Gets the position.
-        /// </summary>
-        /// <value>The position.</value>
         public Point Position
         {
             get
@@ -63,15 +76,35 @@
             }
         }
 
-        /// <summary>
-        /// Gets the intensity.
-        /// </summary>
-        /// <value>The intensity.</value>
         public Color Intensity
         {
             get
             {
                 return intensity;
+            }
+        }
+
+        public int USteps
+        {
+            get
+            {
+                return 1;
+            }
+        }
+
+        public int VSteps
+        {
+            get
+            {
+                return 1;
+            }
+        }
+
+        public int Samples
+        {
+            get
+            {
+                return 1;
             }
         }
 

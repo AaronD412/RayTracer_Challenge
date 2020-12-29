@@ -73,8 +73,8 @@ namespace RayTracerTests
             PointLight light = new PointLight(new Point(0, 0, -10), Color.GetWhite());
 
             // When
-            Color colorOne = material.GetLighting(new Sphere(), light, new Point(0.9, 0, 0), eyeVector, normalVector, false);
-            Color colorTwo = material.GetLighting(new Sphere(), light, new Point(1.1, 0, 0), eyeVector, normalVector, false);
+            Color colorOne = material.GetLighting(new Sphere(), light, new Point(0.9, 0, 0), eyeVector, normalVector, 0);
+            Color colorTwo = material.GetLighting(new Sphere(), light, new Point(1.1, 0, 0), eyeVector, normalVector, 0);
 
             // Then
             Assert.IsTrue(colorOne.NearlyEquals(Color.GetWhite()));
@@ -91,7 +91,7 @@ namespace RayTracerTests
             StripePattern pattern = new StripePattern(Color.GetWhite(), Color.GetBlack());
 
             // When
-            Color color = pattern.GetPatternAtObject(sphere, new Point(1.5, 0, 0));
+            Color color = pattern.GetPatternAtShape(sphere, new Point(1.5, 0, 0));
 
             // Then
             Assert.IsTrue(color.NearlyEquals(Color.GetWhite()));
@@ -107,7 +107,7 @@ namespace RayTracerTests
             pattern.Transform = pattern.Transform.Scale(2, 2, 2);
 
             // When
-            Color color = pattern.GetPatternAtObject(sphere, new Point(1.5, 0, 0));
+            Color color = pattern.GetPatternAtShape(sphere, new Point(1.5, 0, 0));
 
             // Then
             Assert.IsTrue(color.NearlyEquals(Color.GetWhite()));
@@ -124,7 +124,7 @@ namespace RayTracerTests
             pattern.Transform = pattern.Transform.Translate(0.5, 0, 0);
 
             // When
-            Color color = pattern.GetPatternAtObject(sphere, new Point(2.5, 0, 0));
+            Color color = pattern.GetPatternAtShape(sphere, new Point(2.5, 0, 0));
 
             // Then
             Assert.IsTrue(color.NearlyEquals(Color.GetWhite()));
@@ -163,7 +163,7 @@ namespace RayTracerTests
             Pattern pattern = new TestPattern();
 
             // WHen
-            Color color = pattern.GetPatternAtObject(shape, new Point(2, 3, 4));
+            Color color = pattern.GetPatternAtShape(shape, new Point(2, 3, 4));
 
             // Then
             Assert.IsTrue(color.NearlyEquals(new Color(1, 1.5, 2)));
@@ -179,7 +179,7 @@ namespace RayTracerTests
             pattern.Transform = pattern.Transform.Scale(2, 2, 2);
 
             // When
-            Color color = pattern.GetPatternAtObject(shape, new Point(2, 3, 4));
+            Color color = pattern.GetPatternAtShape(shape, new Point(2, 3, 4));
 
             // Then
             Assert.IsTrue(color.NearlyEquals(new Color(1, 1.5, 2)));
@@ -196,7 +196,7 @@ namespace RayTracerTests
             pattern.Transform = pattern.Transform.Translate(0.5, 1, 1.5);
 
             // When
-            Color color = pattern.GetPatternAtObject(shape, new Point(2.5, 3, 3.5));
+            Color color = pattern.GetPatternAtShape(shape, new Point(2.5, 3, 3.5));
 
             // Then
             Assert.IsTrue(color.NearlyEquals(new Color(0.75, 0.5, 0.25)));

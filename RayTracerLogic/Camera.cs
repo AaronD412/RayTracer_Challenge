@@ -1,64 +1,39 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace RayTracerLogic
 {
-    /// <summary>
-    /// Represents the Ray, which is sent through the spheres.
-    /// </summary>
     public class Camera
     {
         #region Private Members
 
-        /// <summary>
-        /// The canvas.
-        /// </summary>
-        private Canvas canvas;
-
-        /// <summary>
-        /// The field of view.
-        /// </summary>
-        private double fieldOfView;
-
-        /// <summary>
-        /// The transformation matrix.
-        /// </summary>
-        private Matrix transform = Matrix.NewIdentityMatrix(4);
-
-        /// <summary>
-        /// The width of the half.
-        /// </summary>
+        private readonly int horizontalSize;
+        private readonly int verticalSize;
+        private readonly double fieldOfView;
+        private Matrix transformationMatrix;
         private double halfWidth;
-
-        /// <summary>
-        /// The height of the half.
-        /// </summary>
         private double halfHeight;
 
-        /// <summary>
-        /// The size of a pixel.
-        /// </summary>
-        private double pixelSize;
-       
         #endregion
 
         #region Public Constructors
 
-        /// <summary>
-        /// Initializes a new instance of the camera class.
-        /// </summary>
-        /// <param name="width">Width.</param>
-        /// <param name="height">Height.</param>
-        /// <param name="fieldOfView">Field of view.</param>
-        public Camera(int width, int height, double fieldOfView)
+        public Camera(int horizontalSize, int verticalSize, double fieldOfView)
         {
-            canvas = new Canvas(width, height);
-
+            this.horizontalSize = horizontalSize;
+            this.verticalSize = verticalSize;
             this.fieldOfView = fieldOfView;
+            transformationMatrix = Matrix.NewIdentityMatrix(4);
+            transformationMatrix.PrecomputeInverse = true;
+        }
 
-            double halfView = Math.Tan(fieldOfView / 2);
+        #endregion
 
-            double aspect = width / (double)height;
+        #region Public Methods
+
+        public double GetPixelSize()
+        {
+            double halfView = System.Math.Tan(fieldOfView / 2);
+            double aspect = (double)horizontalSize / verticalSize;
 
             if (aspect >= 1)
             {
@@ -71,118 +46,69 @@ namespace RayTracerLogic
                 halfHeight = halfView;
             }
 
-            pixelSize = (halfWidth * 2) / width;
+            return (halfWidth * 2) / horizontalSize;
         }
 
-        #endregion
-
-        #region Public Methods
-
-        /// <summary>
-        /// Gets the ray for the given pixel coordinates.
-        /// </summary>
-        /// <returns>The ray for the given pixel coordinates.</returns>
-        /// <param name="pixelX">Pixel x.</param>
-        /// <param name="pixelY">Pixel y.</param>
-        public Ray GetRayForPixel(int pixelX, int pixelY)
+        public Ray GetRayForPixel(int x, int y)
         {
-            // The offset from the edge of the canvas to the pixel's center
-            double xOffset = (pixelX + 0.5) * pixelSize;
-            double yOffset = (pixelY + 0.5) * pixelSize;
+            double pixelSize = GetPixelSize();
+            double xOffset = (x + 0.5) * pixelSize;
+            double yOffset = (y + 0.5) * pixelSize;
 
-            // The untransformed coordinates of the pixel in world space
-            // (remember that the camera looks toward -z, so +x is to the *left*).
             double worldX = halfWidth - xOffset;
             double worldY = halfHeight - yOffset;
 
-            // Using the camera matrix, transform the canvas point and the origin,
-            // and then compute the ray's direction vector
-            // (remember that the canvas is at z = -1).
-            Matrix inverse = transform.GetInverse();
+            Matrix inversedTransform = transformationMatrix.GetInverse();
 
-            Point pixel = inverse * new Point(worldX, worldY, -1);
-            Point origin = inverse * new Point(0, 0, 0);
+            Point pixel = inversedTransform * new Point(worldX, worldY, -1);
+            Point origin = inversedTransform * new Point(0, 0, 0);
             Vector direction = (pixel - origin).Normalize();
 
             return new Ray(origin, direction);
         }
 
-        /// <summary>
-        /// Renders the specified world.
-        /// </summary>
-        /// <returns>The render world as a canvas.</returns>
-        /// <param name="world">The world.</param>
         public Canvas Render(World world)
         {
-            Console.CursorVisible = false;
+            Canvas image = new Canvas(horizontalSize, verticalSize);
 
-            for (int y = 0; y < canvas.Height; y++)
+            //Parallel.For(0, verticalSize, y =>
+            for (int y = 0; y < verticalSize; y++)
             {
-                // Show a progress bar
-                int percentage = y * 100 / canvas.Height;
+                System.Console.WriteLine("    Rendering line " + (y + 1));
 
-                Console.CursorLeft = 0;
-                Console.Write("    " + new string('█', percentage / 2));
-                Console.Write(new string('.', 50 - percentage / 2));
-
-                for (int x = 0; x < canvas.Width; x++)
+                for (int x = 0; x < horizontalSize; x++)
                 {
                     Ray ray = GetRayForPixel(x, y);
-                    Color color = world.GetColorAt(ray);
-                    canvas[x, y] = color;
+                    Color color = world.ColorAt(ray);
+
+                    image[x, y] = color;
                 }
             }
+            //});
 
-            Console.WriteLine();
-            Console.CursorVisible = true;
-
-            return canvas;
+            return image;
         }
 
         #endregion
 
         #region Public Properties
 
-        /// <summary>
-        /// Gets the canvas.
-        /// </summary>
-        /// <value>The canvas.</value>
-        public Canvas Canvas
+        public int HorizontalSize
         {
             get
             {
-                return canvas;
+                return horizontalSize;
             }
         }
 
-        /// <summary>
-        /// Gets the width.
-        /// </summary>
-        /// <value>The width.</value>
-        public int Width
+        public int VerticalSize
         {
             get
             {
-                return canvas.Width;
+                return verticalSize;
             }
         }
 
-        /// <summary>
-        /// Gets the height.
-        /// </summary>
-        /// <value>The height.</value>
-        public int Height
-        {
-            get
-            {
-                return canvas.Height;
-            }
-        }
-
-        /// <summary>
-        /// Gets the field of view.
-        /// </summary>
-        /// <value>The field of view.</value>
         public double FieldOfView
         {
             get
@@ -191,26 +117,19 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets or sets the transformation matrix.
-        /// </summary>
-        /// <value>The transformation matrix.</value>
         public Matrix Transform
         {
             get
             {
-                return transform;
+                return transformationMatrix;
             }
             set
             {
-                transform = value;
+                transformationMatrix = value;
+                transformationMatrix.PrecomputeInverse = true;
             }
         }
 
-        /// <summary>
-        /// Gets the width of the half.
-        /// </summary>
-        /// <value>The width of the half.</value>
         public double HalfWidth
         {
             get
@@ -219,27 +138,11 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets the height of the half.
-        /// </summary>
-        /// <value>The height of the half.</value>
         public double HalfHeight
         {
             get
             {
                 return halfHeight;
-            }
-        }
-
-        /// <summary>
-        /// Gets the size of a pixel.
-        /// </summary>
-        /// <value>The size of a pixel.</value>
-        public double PixelSize
-        {
-            get
-            {
-                return pixelSize;
             }
         }
 

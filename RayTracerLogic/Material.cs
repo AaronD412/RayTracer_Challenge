@@ -1,138 +1,69 @@
-﻿using System;
-
-namespace RayTracerLogic
+﻿namespace RayTracerLogic
 {
-    /// <summary>
-    /// Represents the Material.
-    /// </summary>
     public class Material
     {
-        #region Public Members
+        #region Private Members
 
-        /// <summary>
-        /// The color.
-        /// </summary>
-        private Color color = new Color(1, 1, 1);
-
-        /// <summary>
-        /// The ambient.
-        /// </summary>
+        private Color color = Color.GetWhite();
         private double ambient = 0.1;
-
-        /// <summary>
-        /// The diffuse.
-        /// </summary>
         private double diffuse = 0.9;
-
-        /// <summary>
-        /// The specular.
-        /// </summary>
         private double specular = 0.9;
-
-        /// <summary>
-        /// The shininess.
-        /// </summary>
         private double shininess = 200;
-
-        /// <summary>
-        /// The pattern.
-        /// </summary>
-        private Pattern pattern = null;
-
-        /// <summary>
-        /// The reflective.
-        /// </summary>
         private double reflective = 0.0;
-
-        /// <summary>
-        /// The transparency.
-        /// </summary>
         private double transparency = 0.0;
-
-        /// <summary>
-        /// The refractive index.
-        /// </summary>
         private double refractiveIndex = 1.0;
+        private Pattern pattern = null;
 
         #endregion
 
         #region Public Methods
 
-        /// <summary>
-        /// Gets the lighting at one point in the scene.
-        /// </summary>
-        /// <returns>The lighting.</returns>
-        /// <param name="sceneObject">Scene object.</param>
-        /// <param name="light">Light.</param>
-        /// <param name="point">Point.</param>
-        /// <param name="eyeVector">Eye vector.</param>
-        /// <param name="normalVector">Normal vector.</param>
-        /// <param name="inShadow">If set to <c>true</c> in shadow.</param>
-        public Color GetLighting(Shape shape, PointLight light, Point point, Vector eyeVector, Vector normalVector, bool inShadow)
+        public Color GetLighting(Shape shape, ILightSource light, Point position, Vector eyeVector, Vector normalVector, double lightIntensity)
         {
-            // Find the direction to the light source
-            Vector lightVector = (light.Position - point).Normalize();
             Color color;
 
             if (pattern != null)
             {
-                color = pattern.GetPatternAtObject(shape, point);
+                color = pattern.GetPatternAtShape(shape, position);
             }
             else
             {
                 color = this.color;
             }
 
-            // Combine the surface color with the light's color/intensity
             Color effectiveColor = color * light.Intensity;
+            Color ambient = effectiveColor * Ambient;
+            Color sum = Color.GetBlack();
 
-            // Compute the ambient contribution
-            Color ambientColor = effectiveColor * this.ambient;
-            Color diffuseColor;
-            Color specularColor;
-
-            // lightDotNormal represents the cosine of the angle between the
-            // light vector and the normal vector. A negative number means the
-            // light is on the other side of the surface
-            double lightDotNormal = lightVector.Dot(normalVector);
-
-            if (lightDotNormal < 0 || inShadow)
+            for (int u = 0; u < light.USteps; u++)
             {
-                diffuseColor = Color.GetBlack();
-                specularColor = Color.GetBlack();
-            }
-            else
-            {
-                // Compute the diffuse contribution
-                diffuseColor = effectiveColor * this.diffuse * lightDotNormal;
-
-                // reflectDotEye represents the cosine of the angle between the
-                // reflection vector and the eye vector. A negative number means the
-                // light reflects away from the eye.
-                Vector reflectVector = -lightVector.GetReflect(normalVector);
-                double reflectDotEye = reflectVector.Dot(eyeVector);
-
-                if (reflectDotEye <= 0)
+                for (int v = 0; v < light.VSteps; v++)
                 {
-                    specularColor = Color.GetBlack();
-                }
-                else
-                {
-                    // Compute the specular contribution
-                    double factor = Math.Pow(reflectDotEye, this.shininess);
-                    specularColor = light.Intensity * this.specular * factor;
+                    Vector lightVector = (light.GetPointOnLight(u, v) - position).Normalize();
+                    double lightDotNormal = lightVector.Dot(normalVector);
+
+                    if (lightDotNormal >= 0)
+                    {
+                        Color diffuse = effectiveColor * Diffuse * lightDotNormal;
+
+                        Color specular = Color.GetBlack();
+                        Vector reflectVector = (-lightVector).GetReflect(normalVector);
+                        double reflectDotEye = reflectVector.Dot(eyeVector);
+
+                        if (reflectDotEye > 0)
+                        {
+                            double factor = System.Math.Pow(reflectDotEye, Shininess);
+                            specular = light.Intensity * Specular * factor;
+                        }
+
+                        sum += diffuse + specular;
+                    }
                 }
             }
 
-            // Add the three contributions together to get the final shading
-            return ambientColor + diffuseColor + specularColor;
+            return ambient + (sum  * lightIntensity);
         }
 
-        /// <summary>
-        /// Proofs if the values are equal.
-        /// </summary>
-        /// <returns><c>true</c>, if equals was nearlyed, <c>false</c> otherwise.</returns>
-        /// <param name="material">Material.</param>
         public bool NearlyEquals(Material material)
         {
             return color.NearlyEquals(material.Color) &&
@@ -146,10 +77,6 @@ namespace RayTracerLogic
 
         #region Public Properties
 
-        /// <summary>
-        /// Gets or sets the color.
-        /// </summary>
-        /// <value>The color.</value>
         public Color Color
         {
             get
@@ -162,10 +89,6 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets or sets the ambient.
-        /// </summary>
-        /// <value>The ambient.</value>
         public double Ambient
         {
             get
@@ -178,10 +101,6 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets or sets the diffuse.
-        /// </summary>
-        /// <value>The diffuse.</value>
         public double Diffuse
         {
             get
@@ -194,10 +113,6 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets or sets the specular.
-        /// </summary>
-        /// <value>The specular.</value>
         public double Specular
         {
             get
@@ -210,10 +125,6 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets or sets the shininess.
-        /// </summary>
-        /// <value>The shininess.</value>
         public double Shininess
         {
             get
@@ -226,26 +137,6 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets or sets the pattern.
-        /// </summary>
-        /// <value>The pattern.</value>
-        public Pattern Pattern
-        {
-            get
-            {
-                return pattern;
-            }
-            set
-            {
-                pattern = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the reflective.
-        /// </summary>
-        /// <value>The reflective.</value>
         public double Reflective
         {
             get
@@ -258,10 +149,6 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets or sets the transparency.
-        /// </summary>
-        /// <value>The transparency.</value>
         public double Transparency
         {
             get
@@ -274,10 +161,6 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets or sets the index of the refractive.
-        /// </summary>
-        /// <value>The index of the refractive.</value>
         public double RefractiveIndex
         {
             get
@@ -287,6 +170,18 @@ namespace RayTracerLogic
             set
             {
                 refractiveIndex = value;
+            }
+        }
+
+        public Pattern Pattern
+        {
+            get
+            {
+                return pattern;
+            }
+            set
+            {
+                pattern = value;
             }
         }
 

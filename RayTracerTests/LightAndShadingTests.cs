@@ -141,7 +141,7 @@ namespace RayTracerTests
             PointLight light = new PointLight(new Point(0, 0, -10), new Color(1, 1, 1));
 
             // When
-            Color result = material.GetLighting(new Sphere(), light, position, eyeVector, normalVector, false);
+            Color result = material.GetLighting(new Sphere(), light, position, eyeVector, normalVector, 1);
 
             // Then
             Assert.IsTrue(result.NearlyEquals(new Color(1.9, 1.9, 1.9)));
@@ -160,7 +160,7 @@ namespace RayTracerTests
             PointLight light = new PointLight(new Point(0, 0, -10), new Color(1, 1, 1));
 
             // When
-            Color result = material.GetLighting(new Sphere(), light, position, eyeVector, normalVector, false);
+            Color result = material.GetLighting(new Sphere(), light, position, eyeVector, normalVector, 1);
 
             // Then
             Assert.IsTrue(result.NearlyEquals(new Color(1, 1, 1)));
@@ -179,7 +179,7 @@ namespace RayTracerTests
             PointLight light = new PointLight(new Point(0, 10, -10), new Color(1, 1, 1));
 
             // When
-            Color result = material.GetLighting(new Sphere(), light, position, eyeVector, normalVector, false);
+            Color result = material.GetLighting(new Sphere(), light, position, eyeVector, normalVector, 1);
 
             // Then
             Assert.IsTrue(result.NearlyEquals(new Color(0.7364, 0.7364, 0.7364)));
@@ -198,7 +198,7 @@ namespace RayTracerTests
             PointLight light = new PointLight(new Point(0, 10, -10), new Color(1, 1, 1));
 
             // When
-            Color result = material.GetLighting(new Sphere(), light, position, eyeVector, normalVector, false);
+            Color result = material.GetLighting(new Sphere(), light, position, eyeVector, normalVector, 1);
 
             // Then
             Assert.IsTrue(result.NearlyEquals(new Color(1.6364, 1.6364, 1.6364)));
@@ -217,7 +217,7 @@ namespace RayTracerTests
             PointLight light = new PointLight(new Point(0, 0, 10), new Color(1, 1, 1));
 
             // When
-            Color result = material.GetLighting(new Sphere(), light, position, eyeVector, normalVector, false);
+            Color result = material.GetLighting(new Sphere(), light, position, eyeVector, normalVector, 1);
 
             // Then
             Assert.IsTrue(result.NearlyEquals(new Color(0.1, 0.1, 0.1)));

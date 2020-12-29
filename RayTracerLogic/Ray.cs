@@ -34,6 +34,11 @@
 
         #endregion
 
+        public Point GetPositionAt(double distance)
+        {
+            return origin + direction * distance;
+        }
+
         #region Public Properties
 
         /// <summary>

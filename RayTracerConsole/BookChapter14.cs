@@ -85,7 +85,7 @@ namespace RayTracerConsole
             world.LightSources.Add(new PointLight(new Point(-10, 10, -10), Color.GetWhite()));
             world.LightSources.Add(new PointLight(new Point(10, 5, 20), Color.GetWhite()));
 
-            world.Shape.Add(Hexagon());
+            world.Shapes.Add(Hexagon());
 
             return world;
         }
@@ -98,7 +98,7 @@ namespace RayTracerConsole
         {
             Camera camera = new Camera(480, 320, System.Math.PI / 3)
             {
-                Transform = new Point(0, 1.5, -5).GetViewTransform(new Point(0, 1, 0), new Vector(0, 1, 0))
+                Transform = new Point(0, 1.5, -5).ViewTransform(new Point(0, 1, 0), new Vector(0, 1, 0))
             };
 
             return camera;
