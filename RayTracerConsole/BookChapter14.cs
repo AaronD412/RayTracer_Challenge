@@ -26,22 +26,26 @@ namespace RayTracerConsole
 
         public Shape HexagonCorner()
         {
-            Sphere corner = new Sphere();
-            corner.Transform = (Matrix.NewTranslationMatrix(0, 0, -1) * Matrix.NewScalingMatrix(0.25, 0.25, 0.25));
+            Sphere corner = new Sphere
+            {
+                Transform = (Matrix.NewTranslationMatrix(0, 0, -1) * Matrix.NewScalingMatrix(0.25, 0.25, 0.25))
+            };
 
             return corner;
         }
 
         public Shape HexagonEdge()
         {
-            Cylinder edge = new Cylinder();
-            edge.Minimum = 0;
-            edge.Maximum = 1;
+            Cylinder edge = new Cylinder
+            {
+                Minimum = 0,
+                Maximum = 1,
 
-            edge.Transform = (Matrix.NewTranslationMatrix(0, 0, -1) *
+                Transform = (Matrix.NewTranslationMatrix(0, 0, -1) *
                             Matrix.NewRotationYMatrix(-System.Math.PI / 6) *
                             Matrix.NewRotationZMatrix(-System.Math.PI / 2) *
-                            Matrix.NewScalingMatrix(0.25, 1, 0.25));
+                            Matrix.NewScalingMatrix(0.25, 1, 0.25))
+            };
 
             return edge;
         }
@@ -92,9 +96,10 @@ namespace RayTracerConsole
         /// <returns>The camera.</returns>
         public Camera GetCamera()
         {
-            Camera camera = new Camera(480, 320, System.Math.PI / 3);
-
-            camera.Transform = new Point(0, 1.5, -5).GetViewTransform(new Point(0, 1, 0), new Vector(0, 1, 0));
+            Camera camera = new Camera(480, 320, System.Math.PI / 3)
+            {
+                Transform = new Point(0, 1.5, -5).GetViewTransform(new Point(0, 1, 0), new Vector(0, 1, 0))
+            };
 
             return camera;
         }
