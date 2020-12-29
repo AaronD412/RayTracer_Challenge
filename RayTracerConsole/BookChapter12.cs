@@ -54,6 +54,7 @@ namespace RayTracerConsole
             left.Transform = left.Transform.Scale(0.33, 0.33, 0.33).Translate(-1.5, 0.33, -0.75);
             left.Material.Diffuse = 0.7;
             left.Material.Specular = 0.3;
+            left.Material.Pattern = new CheckersPattern(Color.GetBlack(), Color.GetWhite());
 
             World world = new World();
             world.LightSources.Add(new PointLight(new Point(-10, 10, -10), Color.GetWhite()));
