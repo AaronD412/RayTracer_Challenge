@@ -2,89 +2,88 @@
 
 namespace RayTracerLogic
 {
-    /// <summary>
-    /// Represents an Intersection.
-    /// </summary>
     public class Intersection
     {
         #region Private Members
 
-        /// <summary>
-        /// The distance.
-        /// </summary>
-        private double distance;
-
-        /// <summary>
-        /// The scene object.
-        /// </summary>
-        private Shape shape;
+        private readonly double distance;
+        private readonly Shape shape;
+        private readonly double? u = null;
+        private readonly double? v = null;
 
         #endregion
 
-        #region Public Constructor
+        #region Public Constructors
 
-        /// <summary>
-        /// Initializes a new instance of the Intersection class.
-        /// </summary>
-        /// <param name="distance">Distance.</param>
-        /// <param name="sceneObject">Scene object.</param>
         public Intersection(double distance, Shape shape)
         {
             this.distance = distance;
             this.shape = shape;
         }
 
+        public Intersection(double distance, Shape shape, double u, double v) : this(distance, shape)
+        {
+            this.u = u;
+            this.v = v;
+        }
+
         #endregion
 
-        #region Public Method
+        #region Public Methods
 
-        /// <summary>
-        /// Gets the prepared intersection between a ray and an intersection.
-        /// </summary>
-        /// <returns>The prepared intersection.</returns>
-        /// <param name="ray">Ray.</param>
-        /// <param name="intersections">Intersections.</param>
-        public PreparedIntersection GetPreparedIntersection(Ray ray, Intersections intersections)
+        public PreparedIntersection Prepare(Ray ray, Intersections intersections)
         {
-            Point point = ray.GetPosition(distance);
+            Point point = ray.GetPositionAt(distance);
+            Vector eyeVector = -ray.Direction;
+            Vector normalVector = shape.GetNormalAt(point, this);
 
-            double n1 = 0;
-            double n2 = 0;
+            bool inside = false;
+            if (normalVector.Dot(eyeVector) < 0)
+            {
+                inside = true;
+                normalVector = -normalVector;
+            }
 
-            List<Shape> container = new List<Shape>();
+            Point overPoint = point + (normalVector * Constants.Epsilon);
+            Point underPoint = point - (normalVector * Constants.Epsilon);
+            Vector reflectionVector = ray.Direction.GetReflect(normalVector);
+
+            List<Shape> shapes = new List<Shape>();
+            double n1 = 0.0;
+            double n2 = 0.0;
 
             foreach (Intersection intersection in intersections)
             {
                 if (this == intersection)
                 {
-                    if (container.Count == 0)
+                    if (shapes.Count == 0)
                     {
                         n1 = 1.0;
                     }
                     else
                     {
-                        n1 = container[container.Count - 1].Material.RefractiveIndex;
+                        n1 = shapes[shapes.Count - 1].Material.RefractiveIndex;
                     }
                 }
 
-                if (container.Contains(intersection.Shape))
+                if (shapes.Contains(intersection.Shape))
                 {
-                    container.Remove(intersection.Shape);
+                    shapes.Remove(intersection.Shape);
                 }
                 else
                 {
-                    container.Add(intersection.Shape);
+                    shapes.Add(intersection.Shape);
                 }
 
                 if (this == intersection)
                 {
-                    if (container.Count == 0)
+                    if (shapes.Count == 0)
                     {
                         n2 = 1.0;
                     }
                     else
                     {
-                        n2 = container[container.Count - 1].Material.RefractiveIndex;
+                        n2 = shapes[shapes.Count - 1].Material.RefractiveIndex;
                     }
 
                     break;
@@ -95,11 +94,14 @@ namespace RayTracerLogic
                 distance,
                 shape,
                 point,
-                -ray.Direction,
-                shape.GetNormalAt(point),
+                overPoint,
+                underPoint,
+                eyeVector,
+                normalVector,
+                reflectionVector,
+                inside,
                 n1,
-                n2
-            );
+                n2);
 
             return preparedIntersection;
         }
@@ -108,10 +110,6 @@ namespace RayTracerLogic
 
         #region Public Properties
 
-        /// <summary>
-        /// Gets the distance.
-        /// </summary>
-        /// <value>The distance.</value>
         public double Distance
         {
             get
@@ -120,15 +118,27 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets the scene object.
-        /// </summary>
-        /// <value>The scene object.</value>
         public Shape Shape
         {
             get
             {
                 return shape;
+            }
+        }
+
+        public double? U
+        {
+            get
+            {
+                return u;
+            }
+        }
+
+        public double? V
+        {
+            get
+            {
+                return v;
             }
         }
 

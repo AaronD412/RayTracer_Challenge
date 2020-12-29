@@ -71,12 +71,12 @@ namespace RayTracerConsole
             world.LightSources.Add(new PointLight(new Point(-10, 10, -10), Color.GetWhite()));
             //world.LightSources.Add(new PointLight(new Point(10, 10, -10), Color.GetWhite()));
 
-            world.Shape.Add(floor);
-            world.Shape.Add(middle);
-            world.Shape.Add(right);
-            world.Shape.Add(left);
-            world.Shape.Add(top);
-            world.Shape.Add(topTwo);
+            world.Shapes.Add(floor);
+            world.Shapes.Add(middle);
+            world.Shapes.Add(right);
+            world.Shapes.Add(left);
+            world.Shapes.Add(top);
+            world.Shapes.Add(topTwo);
 
             return world;
         }
@@ -89,7 +89,7 @@ namespace RayTracerConsole
         {
             Camera camera = new Camera(1080, 720, System.Math.PI / 3);
 
-            camera.Transform = new Point(0, 1.5, -5).GetViewTransform(new Point(0, 1, 0), new Vector(0, 1, 0));
+            camera.Transform = new Point(0, 1.5, -5).ViewTransform(new Point(0, 1, 0), new Vector(0, 1, 0));
 
             return camera;
         }

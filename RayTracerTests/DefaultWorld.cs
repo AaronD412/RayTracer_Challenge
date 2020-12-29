@@ -20,13 +20,13 @@ namespace RayTracerTests
             sphere1.Material.Diffuse = 0.7;
             sphere1.Material.Specular = 0.2;
 
-            defaultWorld.Shape.Add(sphere1);
+            defaultWorld.Shapes.Add(sphere1);
 
             Sphere sphere2 = new Sphere();
 
             sphere2.Transform = Matrix.NewScalingMatrix(0.5, 0.5, 0.5);
 
-            defaultWorld.Shape.Add(sphere2);
+            defaultWorld.Shapes.Add(sphere2);
 
             return defaultWorld;
         }

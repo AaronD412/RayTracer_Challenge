@@ -1,59 +1,49 @@
 ﻿namespace RayTracerLogic
 {
-    /// <summary>
-    /// Represents the Patterns.
-    /// </summary>
     public abstract class Pattern
     {
         #region Private Members
 
-        /// <summary>
-        /// The transform.
-        /// </summary>
-        private Matrix transform = Matrix.NewIdentityMatrix(4);
+        private Matrix transformationMatrix;
+
+        #endregion
+
+        #region Public Constructors
+
+        public Pattern()
+        {
+            transformationMatrix = Matrix.NewIdentityMatrix(4);
+            transformationMatrix.PrecomputeInverse = true;
+        }
 
         #endregion
 
         #region Public Methods
 
-        /// <summary>
-        /// Gets the pattern at an object.
-        /// </summary>
-        /// <returns>The pattern at object.</returns>
-        /// <param name="sceneObject">Scene object.</param>
-        /// <param name="worldPoint">World point.</param>
-        public Color GetPatternAtObject(Shape shape, Point worldPoint)
+        public Color GetPatternAtShape(Shape shape, Point worldPoint)
         {
-            Point objectPoint = shape.Transform.GetInverse() * worldPoint;
-            Point patternPoint = this.Transform.GetInverse() * objectPoint;
+            Point objectPoint = shape.ConvertWorldPointToObjectPoint(worldPoint);
+            Point patternPoint = Transform.GetInverse() * objectPoint;
 
             return GetPatternAt(patternPoint);
         }
 
-        /// <summary>
-        /// Gets the pattern at point.
-        /// </summary>
-        /// <returns>The <see cref="T:RayTracerLogic.Color"/>.</returns>
-        /// <param name="point">Point.</param>
         public abstract Color GetPatternAt(Point point);
 
         #endregion
 
         #region Public Properties
 
-        /// <summary>
-        /// Gets or sets the transform.
-        /// </summary>
-        /// <value>The transform.</value>
         public Matrix Transform
         {
             get
             {
-                return transform;
+                return transformationMatrix;
             }
             set
             {
-                transform = value;
+                transformationMatrix = value;
+                transformationMatrix.PrecomputeInverse = true;
             }
         }
 

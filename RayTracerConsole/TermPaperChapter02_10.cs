@@ -39,8 +39,8 @@ namespace RayTracerConsole
             World world = new World();
             world.LightSources.Add(new PointLight(new Point(-10, 5, -10), Color.GetWhite()));
 
-            world.Shape.Add(floor);
-            world.Shape.Add(sphere);
+            world.Shapes.Add(floor);
+            world.Shapes.Add(sphere);
 
             return world;
         }
@@ -53,7 +53,7 @@ namespace RayTracerConsole
         {
             Camera camera = new Camera(1080, 720, System.Math.PI / 3);
 
-            camera.Transform = new Point(0, 1.5, -5).GetViewTransform(new Point(0, 1, 0), new Vector(0, 1, 0));
+            camera.Transform = new Point(0, 1.5, -5).ViewTransform(new Point(0, 1, 0), new Vector(0, 1, 0));
 
             return camera;
         }

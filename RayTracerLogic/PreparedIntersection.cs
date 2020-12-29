@@ -1,112 +1,57 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
 namespace RayTracerLogic
 {
-    /// <summary>
-    /// Represents the Intersection.
-    /// </summary>
     public class PreparedIntersection
     {
         #region Private Members
 
-        /// <summary>
-        /// The distance.
-        /// </summary>
-        private double distance;
-
-        /// <summary>
-        /// The scene object.
-        /// </summary>
-        private Shape shape;
-
-        /// <summary>
-        /// The point.
-        /// </summary>
+        private readonly double distance;
+        private readonly Shape shape;
         private Point point;
-
-        /// <summary>
-        /// The eye vector.
-        /// </summary>
-        private Vector eyeVector;
-
-        /// <summary>
-        /// The normal vector.
-        /// </summary>
-        private Vector normalVector;
-
-        /// <summary>
-        /// The inside.
-        /// </summary>
-        private bool inside;
-
-        /// <summary>
-        /// The over point.
-        /// </summary>
         private Point overPoint;
-
-        /// <summary>
-        /// The reflect vector.
-        /// </summary>
-        private Vector reflectVector;
-
-        /// <summary>
-        /// The n1.
-        /// </summary>
-        private double n1;
-
-        /// <summary>
-        /// The n2.
-        /// </summary>
-        private double n2;
-
-        /// <summary>
-        /// The under point.
-        /// </summary>
         private Point underPoint;
+        private Vector eyeVector;
+        private Vector normalVector;
+        private Vector reflectionVector;
+        private bool inside;
+        private double n1;
+        private double n2;
 
         #endregion
 
         #region Public Constructors
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="T:RayTracerLogic.Intersection"/> class.
-        /// </summary>
-        /// <param name="distance">Distance.</param>
-        /// <param name="sceneObject">Scene object.</param>
-        public PreparedIntersection(double distance, Shape shape, Point point, Vector eyeVector, Vector normalVector, double n1, double n2)
+        public PreparedIntersection(
+            double distance,
+            Shape shape,
+            Point point,
+            Point overPoint,
+            Point underPoint,
+            Vector eyeVector,
+            Vector normalVector,
+            Vector reflectionVector,
+            bool inside,
+            double n1,
+            double n2)
         {
-            if (normalVector.Dot(eyeVector) < 0)
-            {
-                inside = true;
-                normalVector = -normalVector;
-            }
-            else
-            {
-                inside = false;
-            }
-
-            overPoint = point + normalVector * Constants.Epsilon;
-            underPoint = point - normalVector * Constants.Epsilon;
-
             this.distance = distance;
             this.shape = shape;
             this.point = point;
+            this.overPoint = overPoint;
+            this.underPoint = underPoint;
             this.eyeVector = eyeVector;
             this.normalVector = normalVector;
+            this.reflectionVector = reflectionVector;
+            this.inside = inside;
             this.n1 = n1;
             this.n2 = n2;
-
-            reflectVector = -eyeVector.GetReflect(normalVector);
         }
 
         #endregion
 
-        #region Public Method
+        #region Public Methods
 
-        /// <summary>
-        /// Calculates the Schlick
-        /// </summary>
-        /// <returns>The schlick.</returns>
         public double Schlick()
         {
             // Find the cosine of the angle between the eye and normal vectors
@@ -116,34 +61,29 @@ namespace RayTracerLogic
             if (n1 > n2)
             {
                 double n = n1 / n2;
+                double sin2T = n * n * (1 - cos * cos);
 
-                double sin2T = (n * n) * (1.0 - cos * cos);
-
-                if (sin2T > 1.0)
+                if (sin2T > 1)
                 {
-                    return 1.0;
+                    return 1;
                 }
 
-                // Compute the cosine of the thetaT using trig identity
-                double cosT = Math.Sqrt(1.0 - sin2T);
+                // Compute cosine of theta_t using trig identity
+                double cosT = System.Math.Sqrt(1 - sin2T);
 
-                // When n1 > n2, use cos(thetaT) instead
+                // When n1 > n2, use cos(theta_t) instead
                 cos = cosT;
             }
 
-            double r0 = ((n1 - n2) / (n1 + n2)) * ((n1 - n2) / (n1 + n2));
+            double r0 = System.Math.Pow((n1 - n2) / (n1 + n2), 2);
 
-            return r0 + (1.0 - r0) * Math.Pow(1- cos, 5);
+            return r0 + (1 - r0) * System.Math.Pow(1 - cos, 5);
         }
 
         #endregion
 
         #region Public Properties
 
-        /// <summary>
-        /// Gets the distance.
-        /// </summary>
-        /// <value>The distance.</value>
         public double Distance
         {
             get
@@ -152,10 +92,6 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets the scene object.
-        /// </summary>
-        /// <value>The scene object.</value>
         public Shape Shape
         {
             get
@@ -164,10 +100,6 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets the point.
-        /// </summary>
-        /// <value>The point.</value>
         public Point Point
         {
             get
@@ -176,46 +108,6 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets the eye vector.
-        /// </summary>
-        /// <value>The eye vector.</value>
-        public Vector EyeVector
-        {
-            get
-            {
-                return eyeVector;
-            }
-        }
-
-        /// <summary>
-        /// Gets the normal vector.
-        /// </summary>
-        /// <value>The normal vector.</value>
-        public Vector NormalVector
-        {
-            get
-            {
-                return normalVector;
-            }
-        }
-
-        /// <summary>
-        /// Gets a value indicating whether this <see cref="T:RayTracerLogic.PreparedIntersection"/> is inside.
-        /// </summary>
-        /// <value><c>true</c> if inside; otherwise, <c>false</c>.</value>
-        public bool Inside
-        {
-            get
-            {
-                return inside;
-            }
-        }
-
-        /// <summary>
-        /// Gets the over point.
-        /// </summary>
-        /// <value>The over point.</value>
         public Point OverPoint
         {
             get
@@ -224,22 +116,46 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets the reflect vector.
-        /// </summary>
-        /// <value>The reflect vector.</value>
-        public Vector ReflectVector
+        public Point UnderPoint
         {
             get
             {
-                return reflectVector;
+                return underPoint;
             }
         }
 
-        /// <summary>
-        /// Gets the n1.
-        /// </summary>
-        /// <value>The n1.</value>
+        public Vector EyeVector
+        {
+            get
+            {
+                return eyeVector;
+            }
+        }
+
+        public Vector NormalVector
+        {
+            get
+            {
+                return normalVector;
+            }
+        }
+
+        public Vector ReflectionVector
+        {
+            get
+            {
+                return reflectionVector;
+            }
+        }
+
+        public bool Inside
+        {
+            get
+            {
+                return inside;
+            }
+        }
+
         public double N1
         {
             get
@@ -248,27 +164,11 @@ namespace RayTracerLogic
             }
         }
 
-        /// <summary>
-        /// Gets the n2.
-        /// </summary>
-        /// <value>The n2.</value>
         public double N2
         {
             get
             {
                 return n2;
-            }
-        }
-
-        /// <summary>
-        /// Gets the under point.
-        /// </summary>
-        /// <value>The under point.</value>
-        public Point UnderPoint
-        {
-            get
-            {
-                return underPoint;
             }
         }
 

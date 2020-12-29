@@ -13,7 +13,7 @@ namespace RayTracerTests
             World world = new World();
 
             // Then
-            Assert.AreEqual(0, world.Shape.Count);
+            Assert.AreEqual(0, world.Shapes.Count);
             Assert.AreEqual(0, world.LightSources.Count);
         }
 
@@ -21,34 +21,51 @@ namespace RayTracerTests
         public void TheDefaultWorld()
         {
             // Given
-            PointLight light = new PointLight(new Point(-10, 10, -10), new Color(1, 1, 1));
-
-            Sphere sphereOne = new Sphere();
-            sphereOne.Material.Color = new Color(0.8, 1.0, 0.6);
-            sphereOne.Material.Diffuse = 0.7;
-            sphereOne.Material.Specular = 0.2;
-
-            Sphere sphereTwo = new Sphere();
-            sphereTwo.Transform = sphereTwo.Transform.Scale(0.5, 0.5, 0.5);
-
-            // When
-            World defaultWorld = DefaultWorld.NewDefaultWorld();
+            World world = DefaultWorld.NewDefaultWorld();
 
             // Then
-            Assert.IsTrue(defaultWorld.LightSources[0].NearlyEquals(light));
-            Assert.IsTrue(defaultWorld.Shape[0].NearlyEquals(sphereOne));
-            Assert.IsTrue(defaultWorld.Shape[1].NearlyEquals(sphereTwo));
+            PointLight light = new PointLight(
+                new Point(-10, 10, -10),
+                Color.GetWhite());
+
+            Sphere sphere1 = new Sphere();
+
+            sphere1.Material.Color = new Color(0.8, 1.0, 0.6);
+            sphere1.Material.Diffuse = 0.7;
+            sphere1.Material.Specular = 0.2;
+
+            Sphere sphere2 = new Sphere();
+
+            sphere2.Transform = Matrix.NewScalingMatrix(0.5, 0.5, 0.5);
+
+            Assert.IsTrue(world.LightSources[0].NearlyEquals(light));
+
+            bool containsSphere1 = false;
+            bool containsSphere2 = false;
+
+            foreach (Shape shape in world.Shapes)
+            {
+                if (shape.NearlyEquals(sphere1))
+                {
+                    containsSphere1 = true;
+                }
+                else if (shape.NearlyEquals(sphere2))
+                {
+                    containsSphere2 = true;
+                }
+            }
+
+            Assert.AreEqual(true, containsSphere1);
+            Assert.AreEqual(true, containsSphere2);
         }
 
         [Test()]
         public void IntersectAWorldWithARay()
         {
             // Given
-            World defaultWorld = DefaultWorld.NewDefaultWorld();
+            World world = DefaultWorld.NewDefaultWorld();
             Ray ray = new Ray(new Point(0, 0, -5), new Vector(0, 0, 1));
-
-            // When
-            Intersections intersections = defaultWorld.GetIntersections(ray);
+            Intersections intersections = world.GetIntersections(ray);
 
             // Then
             Assert.AreEqual(4, intersections.Count);
@@ -63,15 +80,14 @@ namespace RayTracerTests
         {
             // Given
             Ray ray = new Ray(new Point(0, 0, -5), new Vector(0, 0, 1));
-            Sphere shape = new Sphere();
-            Intersection intersection = new Intersection(4, shape);
+            Shape shape = new Sphere();
+            Intersection hit = new Intersection(4, shape);
 
-            // When
-            PreparedIntersection preparedIntersection = intersection.GetPreparedIntersection(ray, new Intersections(intersection));
+            PreparedIntersection preparedIntersection = hit.Prepare(ray, new Intersections(hit));
 
             // Then
-            Assert.IsTrue(preparedIntersection.Distance.NearlyEquals(intersection.Distance));
-            Assert.IsTrue(preparedIntersection.Shape.NearlyEquals(intersection.Shape));
+            Assert.IsTrue(preparedIntersection.Distance.NearlyEquals(hit.Distance));
+            Assert.IsTrue(preparedIntersection.Shape.NearlyEquals(hit.Shape));
             Assert.IsTrue(preparedIntersection.Point.NearlyEquals(new Point(0, 0, -1)));
             Assert.IsTrue(preparedIntersection.EyeVector.NearlyEquals(new Vector(0, 0, -1)));
             Assert.IsTrue(preparedIntersection.NormalVector.NearlyEquals(new Vector(0, 0, -1)));
@@ -82,14 +98,13 @@ namespace RayTracerTests
         {
             // Given
             Ray ray = new Ray(new Point(0, 0, -5), new Vector(0, 0, 1));
-            Sphere shape = new Sphere();
-            Intersection intersection = new Intersection(4, shape);
+            Shape shape = new Sphere();
+            Intersection hit = new Intersection(4, shape);
 
-            // When
-            PreparedIntersection preparedIntersection = intersection.GetPreparedIntersection(ray, new Intersections(intersection));
+            PreparedIntersection preparedIntersection = hit.Prepare(ray, new Intersections(hit));
 
             // Then
-            Assert.IsFalse(preparedIntersection.Inside);
+            Assert.AreEqual(false, preparedIntersection.Inside);
         }
 
         [Test()]
@@ -97,18 +112,17 @@ namespace RayTracerTests
         {
             // Given
             Ray ray = new Ray(new Point(0, 0, 0), new Vector(0, 0, 1));
-            Sphere shape = new Sphere();
-            Intersection intersection = new Intersection(1, shape);
+            Shape shape = new Sphere();
+            Intersection hit = new Intersection(1, shape);
 
-            // When
-            PreparedIntersection preparedIntersection = intersection.GetPreparedIntersection(ray, new Intersections(intersection));
+            PreparedIntersection preparedIntersection = hit.Prepare(ray, new Intersections(hit));
 
             // Then
             Assert.IsTrue(preparedIntersection.Point.NearlyEquals(new Point(0, 0, 1)));
             Assert.IsTrue(preparedIntersection.EyeVector.NearlyEquals(new Vector(0, 0, -1)));
-            Assert.IsTrue(preparedIntersection.Inside);
+            Assert.AreEqual(true, preparedIntersection.Inside);
 
-            // NormalVector would have been (0, 0, 1), but is inverted!
+            // Normal would have been (0, 0, 1), but is inverted!
             Assert.IsTrue(preparedIntersection.NormalVector.NearlyEquals(new Vector(0, 0, -1)));
         }
 
@@ -118,12 +132,11 @@ namespace RayTracerTests
             // Given
             World world = DefaultWorld.NewDefaultWorld();
             Ray ray = new Ray(new Point(0, 0, -5), new Vector(0, 0, 1));
-            Shape shape = world.Shape[0];
-            Intersection intersection = new Intersection(4, shape);
+            Shape shape = world.Shapes[0];
+            Intersection hit = new Intersection(4, shape);
 
-            // When
-            PreparedIntersection preparedIntersection = intersection.GetPreparedIntersection(ray, new Intersections(intersection));
-            Color color = world.GetShadedHit(preparedIntersection);
+            PreparedIntersection preparedIntersection = hit.Prepare(ray, new Intersections(hit));
+            Color color = world.ShadeHit(preparedIntersection);
 
             // Then
             Assert.IsTrue(color.NearlyEquals(new Color(0.38066, 0.47583, 0.2855)));
@@ -134,14 +147,14 @@ namespace RayTracerTests
         {
             // Given
             World world = DefaultWorld.NewDefaultWorld();
-            world.LightSources[0] = new PointLight(new Point(0, 0.25, 0), new Color(1, 1, 1));
-            Ray ray = new Ray(new Point(0, 0, 0), new Vector(0, 0, 1));
-            Shape shape = world.Shape[1];
-            Intersection intersection = new Intersection(0.5, shape);
+            world.LightSources[0] = new PointLight(new Point(0, 0.25, 0), Color.GetWhite());
 
-            // When
-            PreparedIntersection preparedIntersection = intersection.GetPreparedIntersection(ray, new Intersections(intersection));
-            Color color = world.GetShadedHit(preparedIntersection);
+            Ray ray = new Ray(new Point(0, 0, 0), new Vector(0, 0, 1));
+            Shape shape = world.Shapes[1];
+            Intersection hit = new Intersection(0.5, shape);
+
+            PreparedIntersection preparedIntersection = hit.Prepare(ray, new Intersections(hit));
+            Color color = world.ShadeHit(preparedIntersection);
 
             // Then
             Assert.IsTrue(color.NearlyEquals(new Color(0.90498, 0.90498, 0.90498)));
@@ -153,9 +166,7 @@ namespace RayTracerTests
             // Given
             World world = DefaultWorld.NewDefaultWorld();
             Ray ray = new Ray(new Point(0, 0, -5), new Vector(0, 1, 0));
-
-            // When
-            Color color = world.GetColorAt(ray);
+            Color color = world.ColorAt(ray);
 
             // Then
             Assert.IsTrue(color.NearlyEquals(Color.GetBlack()));
@@ -167,9 +178,7 @@ namespace RayTracerTests
             // Given
             World world = DefaultWorld.NewDefaultWorld();
             Ray ray = new Ray(new Point(0, 0, -5), new Vector(0, 0, 1));
-
-            // When
-            Color color = world.GetColorAt(ray);
+            Color color = world.ColorAt(ray);
 
             // Then
             Assert.IsTrue(color.NearlyEquals(new Color(0.38066, 0.47583, 0.2855)));
@@ -180,17 +189,12 @@ namespace RayTracerTests
         {
             // Given
             World world = DefaultWorld.NewDefaultWorld();
-
-            Shape outer = world.Shape[0];
+            Shape outer = world.Shapes[0];
             outer.Material.Ambient = 1;
-
-            Shape inner = world.Shape[1];
+            Shape inner = world.Shapes[1];
             inner.Material.Ambient = 1;
-
             Ray ray = new Ray(new Point(0, 0, 0.75), new Vector(0, 0, -1));
-
-            // When
-            Color color = world.GetColorAt(ray);
+            Color color = world.ColorAt(ray);
 
             // Then
             Assert.IsTrue(color.NearlyEquals(inner.Material.Color));
@@ -204,26 +208,24 @@ namespace RayTracerTests
             Point to = new Point(0, 0, -1);
             Vector up = new Vector(0, 1, 0);
 
-            // When
-            Matrix transform = from.GetViewTransform(to, up);
+            Matrix viewTransform = from.ViewTransform(to, up);
 
             // Then
-            Assert.IsTrue(transform.NearlyEquals(Matrix.NewIdentityMatrix(4)));
+            Assert.IsTrue(viewTransform.NearlyEquals(Matrix.NewIdentityMatrix(4)));
         }
 
         [Test()]
-        public void AViewTransfromationMatrixLookingInPositiveZDirection()
+        public void AViewTransformationMatrixLookingInPositiveZDirection()
         {
             // Given
             Point from = new Point(0, 0, 0);
             Point to = new Point(0, 0, 1);
             Vector up = new Vector(0, 1, 0);
 
-            // When
-            Matrix transform = from.GetViewTransform(to, up);
+            Matrix viewTransform = from.ViewTransform(to, up);
 
             // Then
-            Assert.IsTrue(transform.NearlyEquals(Matrix.NewScalingMatrix(-1, 1, -1)));
+            Assert.IsTrue(viewTransform.NearlyEquals(Matrix.NewScalingMatrix(-1, 1, -1)));
         }
 
         [Test()]
@@ -234,11 +236,10 @@ namespace RayTracerTests
             Point to = new Point(0, 0, 0);
             Vector up = new Vector(0, 1, 0);
 
-            // When
-            Matrix transform = from.GetViewTransform(to, up);
+            Matrix viewTransform = from.ViewTransform(to, up);
 
             // Then
-            Assert.IsTrue(transform.NearlyEquals(Matrix.NewTranslationMatrix(0, 0, -8)));
+            Assert.IsTrue(viewTransform.NearlyEquals(Matrix.NewTranslationMatrix(0, 0, -8)));
         }
 
         [Test()]
@@ -249,19 +250,22 @@ namespace RayTracerTests
             Point to = new Point(4, -2, 8);
             Vector up = new Vector(1, 1, 0);
 
-            // When
-            Matrix transform = from.GetViewTransform(to, up);
+            Matrix viewTransform = from.ViewTransform(to, up);
 
             // Then
-            Assert.IsTrue(transform.NearlyEquals(new Matrix(
-                new double[,]
-                {
-                    { -0.50709, 0.50709, 0.67612, -2.36643 },
-                    { 0.76772, 0.60609, 0.12122, -2.82843 },
-                    { -0.35857, 0.59761, -0.71714, 0.00000 },
-                    { 0.00000, 0.00000, 0.00000, 1.00000 }
-                }
-            )));
+            Assert.IsTrue(
+                viewTransform.NearlyEquals(
+                    new Matrix(
+                        new double[,]
+                        {
+                            { -0.50709, 0.50709, 0.67612, -2.36643 },
+                            { 0.76772, 0.60609, 0.12122, -2.82843 },
+                            { -0.35857, 0.59761, -0.71714, 0 },
+                            { 0, 0, 0, 1 }
+                        }
+                    )
+                )
+            );
         }
 
         [Test()]
@@ -271,14 +275,12 @@ namespace RayTracerTests
             int horizontalSize = 160;
             int verticalSize = 120;
             double fieldOfView = System.Math.PI / 2;
-
-            // When
             Camera camera = new Camera(horizontalSize, verticalSize, fieldOfView);
 
             // Then
-            Assert.AreEqual(160, camera.Width);
-            Assert.AreEqual(120, camera.Height);
-            Assert.IsTrue(camera.FieldOfView.NearlyEquals(System.Math.PI / 2));
+            Assert.AreEqual(160, camera.HorizontalSize);
+            Assert.AreEqual(120, camera.VerticalSize);
+            Assert.IsTrue((System.Math.PI / 2).NearlyEquals(camera.FieldOfView));
             Assert.IsTrue(camera.Transform.NearlyEquals(Matrix.NewIdentityMatrix(4)));
         }
 
@@ -289,7 +291,7 @@ namespace RayTracerTests
             Camera camera = new Camera(200, 125, System.Math.PI / 2);
 
             // Then
-            Assert.IsTrue(camera.PixelSize.NearlyEquals(0.01));
+            Assert.IsTrue(camera.GetPixelSize().NearlyEquals(0.01));
         }
 
         [Test()]
@@ -299,7 +301,7 @@ namespace RayTracerTests
             Camera camera = new Camera(125, 200, System.Math.PI / 2);
 
             // Then
-            Assert.IsTrue(camera.PixelSize.NearlyEquals(0.01));
+            Assert.IsTrue(camera.GetPixelSize().NearlyEquals(0.01));
         }
 
         [Test()]
@@ -307,8 +309,6 @@ namespace RayTracerTests
         {
             // Given
             Camera camera = new Camera(201, 101, System.Math.PI / 2);
-
-            // When
             Ray ray = camera.GetRayForPixel(100, 50);
 
             // Then
@@ -321,8 +321,6 @@ namespace RayTracerTests
         {
             // Given
             Camera camera = new Camera(201, 101, System.Math.PI / 2);
-
-            // When
             Ray ray = camera.GetRayForPixel(0, 0);
 
             // Then
@@ -335,9 +333,7 @@ namespace RayTracerTests
         {
             // Given
             Camera camera = new Camera(201, 101, System.Math.PI / 2);
-
-            // When
-            camera.Transform = Matrix.NewRotationYMatrix(System.Math.PI / 4) * Matrix.NewTranslationMatrix(0, -2, 5);
+            camera.Transform = Matrix.NewTranslationMatrix(0, -2, 5).RotateY(System.Math.PI / 4);
             Ray ray = camera.GetRayForPixel(100, 50);
 
             // Then
@@ -349,15 +345,16 @@ namespace RayTracerTests
         public void RenderingAWorldWithACamera()
         {
             // Given
-            World defaultWorld = DefaultWorld.NewDefaultWorld();
+            World world = DefaultWorld.NewDefaultWorld();
             Camera camera = new Camera(11, 11, System.Math.PI / 2);
+
             Point from = new Point(0, 0, -5);
             Point to = new Point(0, 0, 0);
             Vector up = new Vector(0, 1, 0);
-            camera.Transform = from.GetViewTransform(to, up);
 
-            // When
-            Canvas image = camera.Render(defaultWorld);
+            camera.Transform = from.ViewTransform(to, up);
+
+            Canvas image = camera.Render(world);
 
             // Then
             Assert.IsTrue(image[5, 5].NearlyEquals(new Color(0.38066, 0.47583, 0.2855)));
