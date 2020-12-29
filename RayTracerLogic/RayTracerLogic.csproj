@@ -63,6 +63,12 @@
     <Compile Include="Cylinder.cs" />
     <Compile Include="Triangle.cs" />
     <Compile Include="ILightsource.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="Points.cs" />
+    <Compile Include="Vectors.cs" />
+    <Compile Include="SmoothTriangle.cs" />
+    <Compile Include="AreaLight.cs" />
+    <Compile Include="Sequence.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

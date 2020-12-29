@@ -48,6 +48,8 @@
     <Compile Include="GroupTests.cs" />
     <Compile Include="TestShape.cs" />
     <Compile Include="TriangleTests.cs" />
+    <Compile Include="OBJParserTests.cs" />
+    <Compile Include="SmoothTriangleTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
