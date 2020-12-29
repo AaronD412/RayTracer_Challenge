@@ -7,9 +7,9 @@ namespace RayTracerTests
     public class TriangleTests
     {
         [Test()]
-        public void CreatingATriabgle()
+        public void ConstructingATriabgle()
         {
-
+            Point p1 = new Point();
         }
     }
 }
