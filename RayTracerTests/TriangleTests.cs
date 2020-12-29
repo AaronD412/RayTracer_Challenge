@@ -42,5 +42,20 @@ namespace RayTracerTests
             Assert.AreSame(n2, triangle.NormalVector);
             Assert.AreSame(n3, triangle.NormalVector);
         }
+
+        [Test()]
+        public void IntersectingARayParallelToTheTriangle()
+        {
+            // Given
+            Triangle triangle = new Triangle(new Point(0, 1, 0), new Point(-1, 0, 0), new Point(1, 0, 0));
+
+            Ray ray = new Ray(new Point(0, -1, -2), new Vector(0, 1, 0));
+
+            // When
+            Intersections intersections = triangle.GetIntersectionsLocal(ray);
+
+            // Then
+            Assert.IsEmpty(intersections);
+        }
     }
 }
