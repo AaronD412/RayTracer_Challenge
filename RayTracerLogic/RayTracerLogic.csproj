@@ -69,6 +69,7 @@
     <Compile Include="SmoothTriangle.cs" />
     <Compile Include="AreaLight.cs" />
     <Compile Include="Sequence.cs" />
+    <Compile Include="Cube.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
