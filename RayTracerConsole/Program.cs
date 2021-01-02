@@ -17,6 +17,7 @@
             //BookChapter09 bookChapter09 = new BookChapter09();
             //BookChapter10 bookChapter10 = new BookChapter10();
             //BookChapter11 bookChapter11 = new BookChapter11();
+            //BookChapter12 bookChapter12 = new BookChapter12();
             //BookChapter14 bookChapter14 = new BookChapter14();
             BookChapter15 bookChapter15 = new BookChapter15();
 
@@ -37,6 +38,7 @@
             //bookChapter09.Run();
             //bookChapter10.Run();
             //bookChapter11.Run();
+            //bookChapter12.Run();
             //bookChapter14.Run();
             bookChapter15.Run();
 

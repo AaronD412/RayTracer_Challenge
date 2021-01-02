@@ -91,3 +91,7 @@ In this chapter cylinders were implemented, which can stand in space just like a
 ## Chapter 14
 
 In this chapter, groups have been implemented that allow multiple objects to be joined together and rendered or displayed as one object.
+
+## Chapter 15
+
+This chapter is about a basic form for ray tracing - triangles. But since it would not be so exciting to render only trianles, a parser for .obj files was implemented in this chapter. With this you can render from files with the obj file format with this ray tracer. 
