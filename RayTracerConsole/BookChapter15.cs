@@ -25,7 +25,12 @@ namespace RayTracerConsole
                 teapot.Material.Pattern.Transform = Matrix.NewScalingMatrix(3, 1, 1).RotateZ(System.Math.PI / 3);
                 teapot.Transform = parser
                     .GetUniformedSizedAndCenteredModelTransformationMatrix()
-                    .Translate(0, -parser.LowestUniformedSizedAndCenteredY, 0);
+                    .Translate(8, -parser.LowestUniformedSizedAndCenteredY, 0);
+
+                System.Console.WriteLine(parser.HighestX);
+                System.Console.WriteLine(parser.HighestY);
+                System.Console.WriteLine(parser.HighestZ);
+
 
                 AreaLight areaLight = new AreaLight(
                     new Point(-10, 5, -10),
@@ -43,7 +48,7 @@ namespace RayTracerConsole
                 //world.LightSources.Add(new PointLight(new Point(-10, 5, -10), Color.GetWhite()));
                 world.LightSources.Add(areaLight);
 
-                Camera camera = new Camera(160, 120, System.Math.PI / 3);
+                Camera camera = new Camera(720, 480, System.Math.PI / 3);
                 camera.Transform = new Point(0, 1.5, -5).ViewTransform(new Point(0, 1, 0), new Vector(0, 1, 0));
 
                 Canvas canvas = camera.Render(world);
