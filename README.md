@@ -10,6 +10,12 @@ After the paper, which is now more than 2 years ago, the project was on hold, bu
 
 Note that all chapters of the book (except 12 and 13) can be found as a file and rendered to vividly show how the Ray Tracer evolves. Maybe Chapter 12 and 13 will be added. 
 
+
+
+The Book "The Ray Tracer Challenge" by Jamis Buck can be purchased on the following website [https://pragprog.com/titles/jbtracer/the-ray-tracer-challenge/].
+
+Brace yourself for a fun challenge: build a photorealistic 3D renderer from scratch! It’s easier than you think. In just a couple of weeks, build a ray tracer that renders beautiful scenes with shadows, reflections, brilliant refraction effects, and subjects composed of various graphics primitives: spheres, cubes, cylinders, triangles, and more. With each chapter, implement another piece of the puzzle and move the renderer that much further forward. Do all of this in whichever language and environment you prefer, and do it entirely test-first, so you know it’s correct. Recharge yourself with this project’s immense potential for personal exploration, experimentation, and discovery.
+
 ## Chapter 1
 
 In this chapter, unfortunately, nothing visible is built yet, the basics, like tuples, points and vectors are implemented.
@@ -94,4 +100,4 @@ In this chapter, groups have been implemented that allow multiple objects to be 
 
 ## Chapter 15
 
-This chapter is about a basic form for ray tracing - triangles. But since it would not be so exciting to render only trianles, a parser for .obj files was implemented in this chapter. With this you can render from files with the obj file format with this ray tracer. 
+This chapter is about a basic form for ray tracing - triangles. But since it would not be so exciting to render only triangles, a parser for .obj files was implemented in this chapter. With this you can render from files with the obj file format with this ray tracer. 
