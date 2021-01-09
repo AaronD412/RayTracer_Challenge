@@ -11,6 +11,7 @@
 [![Code Size][code-size]][code-url]
 [![Repo Size][repo-size]][repo-url]
 [![Downloads][downloads]][download-url]
+[![Release][release]][download-url]
 
 I like programming since I was in 8th grade and chose computer science there. Through my uncle, who always taught me some computer science, I got further and further into the world of programming. In the 11th grade we had to write a term paper and there I chose the Ray Tracer as my topic, because I had already started this project and had a basis for my term paper.
 
@@ -133,5 +134,6 @@ This chapter is about a basic form for ray tracing - triangles. But since it wou
 [repo-url]: https://github.com/omit2c/RayTracer_Challenge.git
 
 [downloads]:https://img.shields.io/github/downloads/omit2c/RayTracer_Challenge/total.svg?style=for-the-badge
-
 [download-url]: https://github.com/omit2c/RayTracer_Challenge.git
+
+[release]:https://img.shields.io/github/v/release/omit2c/RayTracer_Challenge.svg?include_prereleases&style=for-the-badge
