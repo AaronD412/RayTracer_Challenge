@@ -3,6 +3,11 @@
 ## A Test-Driven Guide to Your First 3d Renderer
 
 ---
+[![Issues][issues-shield]][issues-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Forks][forks-shield]][forks-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![MIT License][license-shield]][license-url]
 
 I like programming since I was in 8th grade and chose computer science there. Through my uncle, who always taught me some computer science, I got further and further into the world of programming. In the 11th grade we had to write a term paper and there I chose the Ray Tracer as my topic, because I had already started this project and had a basis for my term paper.
 
@@ -101,3 +106,19 @@ In this chapter, groups have been implemented that allow multiple objects to be 
 ## Chapter 15
 
 This chapter is about a basic form for ray tracing - triangles. But since it would not be so exciting to render only triangles, a parser for .obj files was implemented in this chapter. With this you can render from files with the obj file format with this ray tracer. 
+
+
+[issues-url]: https://github.com/omit2c/RayTracer_Challenge/issues
+[issues-shield]: https://img.shields.io/github/issues/omit2c/RayTracer_Challenge.svg?style=for-the-badge
+
+[stars-shield]: https://img.shields.io/github/stars/omit2c/RayTracer_Challenge.svg?style=for-the-badge
+[stars-url]: https://github.com/omit2c/RayTracer_Challenge/stargazers
+
+[contributors-shield]: https://img.shields.io/github/contributors/omit2c/RayTracer_Challenge.svg?style=for-the-badge
+[contributors-url]: https://github.com/omit2c/RayTracer_Challenge/graphs/contributors
+
+[forks-shield]: https://img.shields.io/github/forks/omit2c/RayTracer_Challenge.svg?style=for-the-badge
+[forks-url]: https://github.com/omit2c/RayTracer_Challenge/network/members
+
+[license-shield]: https://img.shields.io/github/license/omit2c/RayTracer_Challenge.svg?style=for-the-badge
+[license-url]: https://github.com/omit2c/RayTracer_Challenge/blob/main/LICENSE
