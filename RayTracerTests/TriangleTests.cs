@@ -119,4 +119,4 @@ namespace RayTracerTests
             Assert.IsTrue(intersections[0].Distance.NearlyEquals(2));
         }
     }
-}
+} 
