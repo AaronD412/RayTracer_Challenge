@@ -1,4 +1,4 @@
-# The Ray Tracer Challenge
+# The Ray Tracer Challenge ;(
 
 ## A Test-Driven Guide to Your First 3d Renderer
 
